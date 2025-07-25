@@ -1,39 +1,39 @@
 import { User, MapPin, Briefcase, Users } from 'lucide-react';
-
 const FounderSection = () => {
-  const clientLogos = [
-    { name: 'IBM', color: 'text-blue-600' },
-    { name: '3M', color: 'text-red-600' },
-    { name: 'Publicis', color: 'text-purple-600' },
-    { name: 'WPP', color: 'text-orange-600' },
-    { name: 'Omnicom', color: 'text-green-600' },
-  ];
-
-  const achievements = [
-    {
-      icon: Briefcase,
-      text: "12+ Years of Experience",
-      description: "Leading performance marketing initiatives"
-    },
-    {
-      icon: Users,
-      text: "$50M+ Media Spend Managed",
-      description: "Across global advertising platforms"
-    },
-    {
-      icon: MapPin,
-      text: "50+ Brands Scaled",
-      description: "From seed stage to enterprise"
-    },
-    {
-      icon: MapPin,
-      text: "Active in 5+ Markets",
-      description: "India, Japan, Singapore, Vietnam, Australia"
-    }
-  ];
-
-  return (
-    <section id="founder" className="section-padding">
+  const clientLogos = [{
+    name: 'IBM',
+    color: 'text-blue-600'
+  }, {
+    name: '3M',
+    color: 'text-red-600'
+  }, {
+    name: 'Publicis',
+    color: 'text-purple-600'
+  }, {
+    name: 'WPP',
+    color: 'text-orange-600'
+  }, {
+    name: 'Omnicom',
+    color: 'text-green-600'
+  }];
+  const achievements = [{
+    icon: Briefcase,
+    text: "12+ Years of Experience",
+    description: "Leading performance marketing initiatives"
+  }, {
+    icon: Users,
+    text: "$50M+ Media Spend Managed",
+    description: "Across global advertising platforms"
+  }, {
+    icon: MapPin,
+    text: "50+ Brands Scaled",
+    description: "From seed stage to enterprise"
+  }, {
+    icon: MapPin,
+    text: "Active in 5+ Markets",
+    description: "India, Japan, Singapore, Vietnam, Australia"
+  }];
+  return <section id="founder" className="section-padding">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h3 className="text-sm font-semibold text-primary mb-2 tracking-wider uppercase">
@@ -65,13 +65,12 @@ const FounderSection = () => {
           </div>
 
           {/* Achievements Grid */}
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            {achievements.map((achievement, index) => (
-              <div 
-                key={index}
-                className="card-3d group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up" style={{
+          animationDelay: '0.3s'
+        }}>
+            {achievements.map((achievement, index) => <div key={index} className="card-3d group" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all duration-300">
                     <achievement.icon className="w-6 h-6 text-white" />
@@ -86,33 +85,25 @@ const FounderSection = () => {
                     </p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
 
         {/* Client Logos */}
-        <div className="mt-20 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <h3 className="text-center text-lg font-semibold mb-8 text-muted-foreground">
-            Trusted by Leading Brands
-          </h3>
+        <div className="mt-20 animate-fade-in-up" style={{
+        animationDelay: '0.6s'
+      }}>
+          <h3 className="text-center text-lg font-semibold mb-8 text-muted-foreground">Work Experience</h3>
           
           <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
-            {clientLogos.map((logo, index) => (
-              <div 
-                key={index}
-                className="group cursor-pointer transition-all duration-300 hover:scale-110"
-              >
+            {clientLogos.map((logo, index) => <div key={index} className="group cursor-pointer transition-all duration-300 hover:scale-110">
                 <div className={`text-3xl font-bold ${logo.color} group-hover:text-primary transition-colors`}>
                   {logo.name}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FounderSection;

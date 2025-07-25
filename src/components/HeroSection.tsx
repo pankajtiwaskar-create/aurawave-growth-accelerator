@@ -38,7 +38,7 @@ const HeroSection = () => {
             </p>
 
             <div className="flex justify-center">
-              <Button size="lg" onClick={() => scrollToSection('contact')} className="btn-hero text-lg px-8 py-4">
+              <Button size="lg" onClick={() => scrollToSection('contact')} className="btn-hero text-lg px-8 py-4 text-gray-50">
                 Book Free Strategy Call
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

@@ -25,7 +25,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="text-center lg:text-left animate-fade-in-up mx-[10px]">
+          <div className="text-center animate-fade-in-up mx-[10px]">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
               Accelerate Growth with{' '}
               <span className="text-glow">Paid Media</span>{' '}
@@ -37,15 +37,10 @@ const HeroSection = () => {
               AI-powered optimization, and proven performance strategies.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex justify-center">
               <Button size="lg" onClick={() => scrollToSection('contact')} className="btn-hero text-lg px-8 py-4">
                 Book Free Strategy Call
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              
-              <Button variant="outline" size="lg" onClick={() => scrollToSection('about')} className="btn-ghost text-lg px-8 py-4">
-                <Play className="mr-2 h-5 w-5" />
-                Watch Demo
               </Button>
             </div>
           </div>

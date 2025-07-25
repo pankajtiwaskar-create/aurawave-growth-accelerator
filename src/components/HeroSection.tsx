@@ -60,21 +60,9 @@ const HeroSection = () => {
               </div>
 
               {/* Floating Stats */}
-              <div className="absolute -top-4 -left-4 bg-card border border-border rounded-xl p-4 shadow-card animate-pulse-glow">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">$50M+</div>
-                  <div className="text-sm text-muted-foreground">Media Spend</div>
-                </div>
-              </div>
+              
 
-              <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-xl p-4 shadow-card animate-pulse-glow" style={{
-              animationDelay: '1s'
-            }}>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-secondary">50+</div>
-                  <div className="text-sm text-muted-foreground">Brands Scaled</div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Spline from '@splinetool/react-spline';
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -50,19 +51,10 @@ const HeroSection = () => {
           animationDelay: '0.3s'
         }}>
             <div className="relative">
-              {/* Main Device Mockup */}
-              <div className="relative mx-auto w-80 h-96 lg:w-96 lg:h-[480px]">
-                {/* Phone Frame */}
-                
-
-                {/* Tablet Behind */}
-                
-              </div>
-
-              {/* Floating Stats */}
-              
-
-              
+              <Spline
+                scene="https://prod.spline.design/Gcf-Qg0h2WFothfj/scene.splinecode"
+                className="w-full h-[500px] lg:h-[600px]"
+              />
             </div>
           </div>
         </div>

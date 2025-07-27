@@ -64,15 +64,18 @@ const ServicesSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-6">
-                <div className="relative mb-4">
-                  <img 
-                    src={service.icon} 
-                    alt={service.title}
-                    className="w-16 h-16 object-contain transform transition-all duration-300 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-                    style={{
-                      filter: 'grayscale(20%) brightness(0.9) contrast(1.1)',
-                    }}
-                  />
+                <div className="relative mb-4 flex justify-center">
+                  <div className="relative">
+                    {/* Purple glow backdrop */}
+                    <div className="absolute inset-0 bg-[#B38DFF] opacity-20 blur-xl rounded-full scale-150 transition-all duration-300 group-hover:opacity-30 group-hover:scale-175"></div>
+                    
+                    {/* Icon */}
+                    <img 
+                      src={service.icon} 
+                      alt={service.title}
+                      className="relative w-16 h-16 object-contain transform transition-all duration-300 group-hover:scale-110 z-10"
+                    />
+                  </div>
                 </div>
                 
                 <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">

@@ -23,7 +23,7 @@ const AboutSection = () => {
   }];
   return <section id="about" className="section-padding bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="animate-fade-in-up">
             <div className="mb-6">
@@ -69,11 +69,34 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Right Stats Grid */}
-          <div className="grid grid-cols-2 gap-6 animate-scale-in" style={{
-          animationDelay: '0.3s'
-        }}>
-            {stats.map((stat, index) => {})}
+          {/* Right Content - Image and Stats */}
+          <div className="space-y-8 animate-scale-in" style={{ animationDelay: '0.3s' }}>
+            {/* Tech visualization image */}
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop&crop=center"
+                alt="Technology and data visualization"
+                className="w-full h-64 object-cover rounded-xl shadow-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent rounded-xl"></div>
+            </div>
+            
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={index} className="bg-card/50 backdrop-blur-sm rounded-lg p-4 border border-border/50">
+                    <div className="flex items-center mb-2">
+                      <Icon className="w-5 h-5 text-primary mr-2" />
+                      <span className="text-2xl font-bold text-foreground">{stat.number}</span>
+                    </div>
+                    <h4 className="font-semibold text-sm mb-1">{stat.label}</h4>
+                    <p className="text-xs text-muted-foreground">{stat.description}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

@@ -48,13 +48,13 @@ const HeroSection = () => {
     }
   };
   return <section id="hero" className="min-h-screen flex flex-col relative overflow-hidden bg-gray-900">
-      {/* 3D Spline Background - Fixed positioning to prevent scrolling */}
+      {/* 3D Spline Background - Scrolls with page, 25% larger */}
       {isHeroVisible && (
         <div 
-          className="fixed inset-0 w-full h-full z-0"
+          className="absolute inset-0 w-full h-full z-0"
           style={{
             willChange: 'transform',
-            transform: 'translateZ(0)',
+            transform: 'scale(1.25) translateZ(0)',
             backfaceVisibility: 'hidden',
             contain: 'layout style paint'
           }}

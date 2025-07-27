@@ -1,41 +1,40 @@
-import { 
-  Rocket, 
-  Zap, 
-  TrendingUp, 
-  Palette, 
-  BarChart3, 
-  Brain 
-} from 'lucide-react';
+// Import 3D icon images
+import rocketIcon from '@/assets/icons/rocket-3d.png';
+import zapIcon from '@/assets/icons/zap-3d.png';
+import trendingIcon from '@/assets/icons/trending-3d.png';
+import paletteIcon from '@/assets/icons/palette-3d.png';
+import chartIcon from '@/assets/icons/chart-3d.png';
+import brainIcon from '@/assets/icons/brain-3d.png';
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: Rocket,
+      icon: rocketIcon,
       title: "Performance Media",
       description: "ROI-first campaigns on Instagram, Meta, Google, YouTube & TikTok with advanced audience targeting and conversion optimization."
     },
     {
-      icon: Zap,
+      icon: zapIcon,
       title: "Paid Social Strategy",
       description: "Data-backed social media plans that maximize reach and conversions across all major platforms with creative A/B testing."
     },
     {
-      icon: TrendingUp,
+      icon: trendingIcon,
       title: "Programmatic & Display",
       description: "Automated audience buying across top DSPs for scale and efficiency, leveraging real-time bidding and advanced targeting."
     },
     {
-      icon: Palette,
+      icon: paletteIcon,
       title: "Creative for Performance",
       description: "High-impact creative assets optimized for A/B testing, designed specifically for performance marketing campaigns."
     },
     {
-      icon: BarChart3,
+      icon: chartIcon,
       title: "Data & Analytics Reporting",
       description: "Transparent dashboards with actionable insights, real-time performance tracking, and comprehensive ROI analysis."
     },
     {
-      icon: Brain,
+      icon: brainIcon,
       title: "AI-driven Creative & Website Dev",
       description: "Smart assets and landing pages powered by AI, optimized for conversion and personalized user experiences."
     }
@@ -65,8 +64,16 @@ const ServicesSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-6">
-                <div className="w-16 h-16 icon-3d flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
-                  <service.icon className="w-8 h-8 text-white drop-shadow-lg" />
+                <div className="relative mb-4">
+                  <img 
+                    src={service.icon} 
+                    alt={service.title}
+                    className="w-20 h-20 object-contain transform transition-all duration-300 group-hover:scale-110"
+                    style={{
+                      filter: 'drop-shadow(0 6px 16px hsl(var(--primary) / 0.4))',
+                    }}
+                  />
+                  <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-primary/30 to-secondary/30 blur-xl -z-10"></div>
                 </div>
                 
                 <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">

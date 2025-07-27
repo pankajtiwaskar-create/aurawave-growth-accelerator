@@ -1,46 +1,55 @@
-import { Globe, Users, TrendingUp, Eye, Target, Rocket, Settings, Zap } from 'lucide-react';
+// Import 3D icon images
+import globeIcon from '@/assets/icons/globe-3d.png';
+import brainIcon from '@/assets/icons/brain-3d.png';
+import usersIcon from '@/assets/icons/users-3d.png';
+import chartIcon from '@/assets/icons/chart-3d.png';
+import eyeIcon from '@/assets/icons/eye-3d.png';
+import targetIcon from '@/assets/icons/target-3d.png';
+import rocketIcon from '@/assets/icons/rocket-3d.png';
+import settingsIcon from '@/assets/icons/settings-3d.png';
+import puzzleIcon from '@/assets/icons/puzzle-3d.png';
 
 const AboutSection = () => {
   const features = [
     {
-      icon: Globe,
+      icon: globeIcon,
       title: "SEA Market Domination",
       description: "We're not generalists—we deeply understand the nuances of Southeast Asian markets, from consumer behavior to cultural buying triggers."
     },
     {
-      icon: Users,
+      icon: brainIcon,
+      title: "AI-Led Performance Engine",
+      description: "We leverage AI and machine learning to constantly optimize campaigns, identify micro-trends, and drive smarter decisions in real time."
+    },
+    {
+      icon: usersIcon,
       title: "Senior Expertise, Startup Agility",
       description: "You get access to senior strategists with 12+ years of experience, minus the slow-moving agency red tape. Faster pivots, sharper focus."
     },
     {
-      icon: TrendingUp,
+      icon: chartIcon,
       title: "ROI-Driven, Not Just Impressions",
       description: "Every dollar spent is tied to measurable growth. We obsess over conversion metrics—not just reach or vanity numbers."
     },
     {
-      icon: Eye,
+      icon: eyeIcon,
       title: "Radical Transparency",
       description: "We give clients live access to dashboards, full visibility into every dollar spent, and proactive reporting you don't have to chase."
     },
     {
-      icon: Target,
+      icon: targetIcon,
       title: "Full-Funnel Campaign Thinking",
       description: "From awareness to acquisition to retention, we design integrated strategies that move customers through your funnel with purpose."
     },
     {
-      icon: Rocket,
+      icon: rocketIcon,
       title: "Growth-Minded Partnerships",
       description: "We're more than service providers—we act as your in-house growth team. Your KPIs are our north star."
     },
     {
-      icon: Settings,
+      icon: settingsIcon,
       title: "Cross-Platform Mastery",
       description: "Meta, Google, YouTube, TikTok, Programmatic, DV360—you name it, we optimize across it with precision and platform-specific know-how."
-    },
-    {
-      icon: Zap,
-      title: "Creative Meets Data",
-      description: "Our campaigns balance performance analytics with sharp creative storytelling—because clicks come from both logic and emotion."
     }
   ];
 
@@ -59,32 +68,37 @@ const AboutSection = () => {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <div
-                key={index}
-                className="group bg-card p-6 lg:p-8 rounded-xl border shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/20 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                      <Icon className="w-6 h-6 text-primary" />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors duration-300">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {feature.description}
-                    </p>
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="group bg-card p-6 lg:p-8 rounded-xl border border-border/50 shadow-sm transition-all duration-300 hover:shadow-elegant hover:-translate-y-2 hover:border-primary/30 animate-fade-in-up hover:bg-gradient-to-br hover:from-card hover:to-primary/5"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="flex items-start space-x-6">
+                <div className="flex-shrink-0">
+                  <div className="relative group-hover:scale-110 transition-all duration-300">
+                    <img 
+                      src={feature.icon} 
+                      alt={feature.title}
+                      className="w-16 h-16 object-contain transform transition-all duration-300 group-hover:scale-110"
+                      style={{
+                        filter: 'drop-shadow(0 4px 12px hsl(var(--primary) / 0.3))',
+                      }}
+                    />
+                    <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-primary/20 to-secondary/20 blur-xl -z-10"></div>
                   </div>
                 </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

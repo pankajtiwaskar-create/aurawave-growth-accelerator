@@ -43,17 +43,17 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 dark:bg-background/70 backdrop-blur-xl border-b border-border/50 dark:border-border/30 transition-all duration-300">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 group cursor-pointer">
             <img 
               src={auraWaveLogo} 
               alt="AuraWave Digital" 
-              className="w-8 h-8 lg:w-10 lg:h-10"
+              className="w-8 h-8 lg:w-10 lg:h-10 transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="text-xl lg:text-2xl font-bold text-glow">
+            <span className="text-xl lg:text-2xl font-bold text-glow transition-all duration-300 group-hover:scale-105">
               AuraWave Digital
             </span>
           </div>
@@ -64,9 +64,10 @@ const Header = () => {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href.substring(1))}
-                className="font-medium text-foreground hover:text-primary transition-colors link-underline"
+                className="relative font-medium text-foreground hover:text-primary transition-all duration-300 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group"
               >
-                {item.label}
+                <span className="relative z-10">{item.label}</span>
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full"></div>
               </button>
             ))}
           </nav>
@@ -78,13 +79,15 @@ const Header = () => {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="w-9 h-9"
+              className="w-9 h-9 relative overflow-hidden group hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300"
             >
-              {isDark ? (
-                <Sun className="h-4 w-4" />
-              ) : (
-                <Moon className="h-4 w-4" />
-              )}
+              <div className="relative">
+                {isDark ? (
+                  <Sun className="h-4 w-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />
+                ) : (
+                  <Moon className="h-4 w-4 transition-all duration-300 group-hover:scale-110 group-hover:-rotate-12" />
+                )}
+              </div>
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -104,9 +107,11 @@ const Header = () => {
             {/* CTA Button */}
             <Button
               onClick={() => scrollToSection('contact')}
-              className="hidden lg:flex btn-hero"
+              className="hidden lg:flex relative overflow-hidden group bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-2.5 rounded-xl shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
             >
-              Get Started
+              <span className="relative z-10 transition-all duration-300 group-hover:scale-105">Get Started</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-primary/50 to-secondary/50 blur-lg -z-10"></div>
             </Button>
           </div>
         </div>
@@ -114,22 +119,23 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-background border-t border-border">
-          <nav className="container mx-auto px-4 py-4 space-y-4">
+        <div className="lg:hidden bg-background/95 dark:bg-background/90 backdrop-blur-xl border-t border-border/50 animate-fade-in-up">
+          <nav className="container mx-auto px-4 py-6 space-y-3">
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href.substring(1))}
-                className="block w-full text-left font-medium text-foreground hover:text-primary transition-colors"
+                className="block w-full text-left font-medium text-foreground hover:text-primary transition-all duration-300 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20"
               >
                 {item.label}
               </button>
             ))}
             <Button
               onClick={() => scrollToSection('contact')}
-              className="w-full btn-hero mt-4"
+              className="w-full mt-6 relative overflow-hidden group bg-gradient-to-r from-primary to-secondary text-white font-semibold py-3 rounded-xl shadow-elegant hover:shadow-glow transition-all duration-300"
             >
-              Get Started
+              <span className="relative z-10">Get Started</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
           </nav>
         </div>

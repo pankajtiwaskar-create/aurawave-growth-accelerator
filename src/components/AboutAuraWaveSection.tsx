@@ -32,18 +32,28 @@ const AboutAuraWaveSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Abstract Illustration */}
+          {/* Right Column - Digital Energy Image */}
           <div className="relative animate-scale-in" style={{ animationDelay: '0.2s' }}>
             <div className="relative h-96 lg:h-[500px] overflow-hidden rounded-2xl">
-              {/* Animated Background */}
+              {/* Background Image */}
+              <img 
+                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Digital code and innovation"
+                className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+              />
+              
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/30 rounded-2xl"></div>
+              
+              {/* Animated Overlay Elements */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 rounded-2xl">
                 {/* Floating Elements */}
-                <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-gradient-primary rounded-full opacity-60 animate-pulse"></div>
-                <div className="absolute top-1/2 right-1/3 w-8 h-8 bg-gradient-secondary rounded-full opacity-40 animate-pulse" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute bottom-1/3 left-1/2 w-12 h-12 bg-gradient-accent rounded-full opacity-50 animate-pulse" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-gradient-primary rounded-full opacity-40 animate-pulse"></div>
+                <div className="absolute top-1/2 right-1/3 w-8 h-8 bg-gradient-secondary rounded-full opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute bottom-1/3 left-1/2 w-12 h-12 bg-gradient-accent rounded-full opacity-35 animate-pulse" style={{ animationDelay: '2s' }}></div>
                 
                 {/* Wave Lines */}
-                <div className="absolute inset-0 opacity-30">
+                <div className="absolute inset-0 opacity-20">
                   <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent transform rotate-12"></div>
                   <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary to-transparent transform -rotate-6"></div>
                   <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent transform rotate-3"></div>
@@ -51,14 +61,14 @@ const AboutAuraWaveSection = () => {
                 
                 {/* Spark Lines */}
                 <div className="absolute inset-0">
-                  <div className="absolute top-1/3 right-1/4 w-24 h-px bg-gradient-to-r from-primary to-transparent transform rotate-45 opacity-60 animate-pulse"></div>
-                  <div className="absolute bottom-1/2 left-1/4 w-32 h-px bg-gradient-to-r from-secondary to-transparent transform -rotate-12 opacity-40 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-                  <div className="absolute top-2/3 right-1/3 w-20 h-px bg-gradient-to-r from-accent to-transparent transform rotate-30 opacity-50 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                  <div className="absolute top-1/3 right-1/4 w-24 h-px bg-gradient-to-r from-primary to-transparent transform rotate-45 opacity-40 animate-pulse"></div>
+                  <div className="absolute bottom-1/2 left-1/4 w-32 h-px bg-gradient-to-r from-secondary to-transparent transform -rotate-12 opacity-30 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+                  <div className="absolute top-2/3 right-1/3 w-20 h-px bg-gradient-to-r from-accent to-transparent transform rotate-30 opacity-35 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 </div>
               </div>
               
-              {/* Overlay for depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-2xl"></div>
+              {/* Depth Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent rounded-2xl"></div>
             </div>
           </div>
         </div>

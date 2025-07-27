@@ -1,10 +1,20 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Spline from '@splinetool/react-spline';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const HeroSection = () => {
   const [splineError, setSplineError] = useState(false);
+  const [webglSupported, setWebglSupported] = useState(true);
+
+  useEffect(() => {
+    // Check for WebGL support
+    const canvas = document.createElement('canvas');
+    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if (!gl) {
+      setWebglSupported(false);
+    }
+  }, []);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -54,7 +64,7 @@ const HeroSection = () => {
           animationDelay: '0.3s'
         }}>
             <div className="relative">
-              {!splineError ? (
+              {webglSupported && !splineError ? (
                 <Spline
                   scene="https://prod.spline.design/Gcf-Qg0h2WFothfj/scene.splinecode"
                   className="w-full h-[500px] lg:h-[600px]"

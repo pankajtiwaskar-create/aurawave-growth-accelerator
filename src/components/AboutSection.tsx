@@ -86,9 +86,11 @@ const AboutSection = () => {
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
-                  <div key={index} className="bg-card/50 backdrop-blur-sm rounded-lg p-4 border border-border/50">
+                  <div key={index} className="bg-card/50 backdrop-blur-sm rounded-lg p-4 border border-border/50 group hover:bg-card transition-all duration-300">
                     <div className="flex items-center mb-2">
-                      <Icon className="w-5 h-5 text-primary mr-2" />
+                      <div className="w-8 h-8 icon-glow flex items-center justify-center mr-2 group-hover:scale-110 transition-all duration-300">
+                        <Icon className="w-5 h-5 text-white" />
+                      </div>
                       <span className="text-2xl font-bold text-foreground">{stat.number}</span>
                     </div>
                     <h4 className="font-semibold text-sm mb-1">{stat.label}</h4>

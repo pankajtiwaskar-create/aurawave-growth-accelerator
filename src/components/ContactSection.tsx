@@ -110,24 +110,30 @@ const ContactSection = () => {
               <h3 className="text-2xl font-bold mb-6">Other ways to reach us</h3>
               
               <div className="space-y-4">
-                <Button variant="outline" className="w-full justify-start h-auto p-4 btn-ghost" onClick={() => window.open('https://wa.me/919923765568', '_blank')}>
-                  <MessageSquare className="w-5 h-5 mr-3 text-green-600" />
+                <Button variant="outline" className="w-full justify-start h-auto p-4 btn-ghost group" onClick={() => window.open('https://wa.me/919923765568', '_blank')}>
+                  <div className="w-8 h-8 icon-glow flex items-center justify-center mr-3 group-hover:scale-110 transition-all duration-300">
+                    <MessageSquare className="w-5 h-5 text-white" />
+                  </div>
                   <div className="text-left">
                     <div className="font-semibold">WhatsApp Chat</div>
                     <div className="text-sm text-muted-foreground">Quick questions & support</div>
                   </div>
                 </Button>
 
-                <Button variant="outline" className="w-full justify-start h-auto p-4 btn-ghost" onClick={() => window.open('https://calendly.com/aurawave-digital', '_blank')}>
-                  <Calendar className="w-5 h-5 mr-3 text-primary" />
+                <Button variant="outline" className="w-full justify-start h-auto p-4 btn-ghost group" onClick={() => window.open('https://calendly.com/aurawave-digital', '_blank')}>
+                  <div className="w-8 h-8 icon-glow flex items-center justify-center mr-3 group-hover:scale-110 transition-all duration-300">
+                    <Calendar className="w-5 h-5 text-white" />
+                  </div>
                   <div className="text-left">
                     <div className="font-semibold">Schedule Strategy Call</div>
                     <div className="text-sm text-muted-foreground">30-min free consultation</div>
                   </div>
                 </Button>
 
-                <Button variant="outline" className="w-full justify-start h-auto p-4 btn-ghost" onClick={() => window.location.href = 'mailto:marketing@aurawavedigital.com'}>
-                  <Mail className="w-5 h-5 mr-3 text-secondary" />
+                <Button variant="outline" className="w-full justify-start h-auto p-4 btn-ghost group" onClick={() => window.location.href = 'mailto:marketing@aurawavedigital.com'}>
+                  <div className="w-8 h-8 icon-glow flex items-center justify-center mr-3 group-hover:scale-110 transition-all duration-300">
+                    <Mail className="w-5 h-5 text-white" />
+                  </div>
                   <div className="text-left">
                     <div className="font-semibold">Email Us</div>
                     <div className="text-sm text-muted-foreground">marketing@aurawavedigital.com</div>

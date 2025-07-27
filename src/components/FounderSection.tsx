@@ -1,4 +1,4 @@
-import { User, MapPin, Briefcase, Users } from 'lucide-react';
+import { Award, Globe, Briefcase, Users } from 'lucide-react';
 const FounderSection = () => {
   const clientLogos = [{
     name: 'IBM',
@@ -17,7 +17,7 @@ const FounderSection = () => {
     color: 'text-green-600'
   }];
   const achievements = [{
-    icon: Briefcase,
+    icon: Award,
     text: "12+ Years of Experience",
     description: "Leading performance marketing initiatives"
   }, {
@@ -25,11 +25,11 @@ const FounderSection = () => {
     text: "$50M+ Media Spend Managed",
     description: "Across global advertising platforms"
   }, {
-    icon: MapPin,
+    icon: Briefcase,
     text: "50+ Brands Scaled",
     description: "From seed stage to enterprise"
   }, {
-    icon: MapPin,
+    icon: Globe,
     text: "Active in 5+ Markets",
     description: "India, Japan, Singapore, Vietnam, Australia"
   }];
@@ -76,8 +76,8 @@ const FounderSection = () => {
             animationDelay: `${index * 0.1}s`
           }}>
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all duration-300">
-                    <achievement.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 icon-3d flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                    <achievement.icon className="w-6 h-6 text-white drop-shadow-lg" />
                   </div>
                   
                   <div className="flex-1">

@@ -1,26 +1,26 @@
 import { 
-  Target, 
-  Share2, 
-  BarChart3, 
+  Rocket, 
+  Zap, 
+  TrendingUp, 
   Palette, 
-  PieChart, 
+  BarChart3, 
   Brain 
 } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: Target,
+      icon: Rocket,
       title: "Performance Media",
       description: "ROI-first campaigns on Instagram, Meta, Google, YouTube & TikTok with advanced audience targeting and conversion optimization."
     },
     {
-      icon: Share2,
+      icon: Zap,
       title: "Paid Social Strategy",
       description: "Data-backed social media plans that maximize reach and conversions across all major platforms with creative A/B testing."
     },
     {
-      icon: BarChart3,
+      icon: TrendingUp,
       title: "Programmatic & Display",
       description: "Automated audience buying across top DSPs for scale and efficiency, leveraging real-time bidding and advanced targeting."
     },
@@ -30,7 +30,7 @@ const ServicesSection = () => {
       description: "High-impact creative assets optimized for A/B testing, designed specifically for performance marketing campaigns."
     },
     {
-      icon: PieChart,
+      icon: BarChart3,
       title: "Data & Analytics Reporting",
       description: "Transparent dashboards with actionable insights, real-time performance tracking, and comprehensive ROI analysis."
     },
@@ -65,8 +65,8 @@ const ServicesSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-elegant group-hover:shadow-glow transition-all duration-300 mb-4">
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 icon-3d flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
+                  <service.icon className="w-8 h-8 text-white drop-shadow-lg" />
                 </div>
                 
                 <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">

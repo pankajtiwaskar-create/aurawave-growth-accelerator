@@ -34,10 +34,21 @@ const HeroSection = () => {
   };
   return <section id="hero" className="min-h-screen flex flex-col relative overflow-hidden bg-gray-900">
       {/* 3D Spline Background */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="fixed inset-0 w-full h-full" style={{ 
+        contain: 'layout style paint',
+        transformStyle: 'preserve-3d',
+        willChange: 'transform',
+        backfaceVisibility: 'hidden'
+      }}>
         <spline-viewer 
           url="https://prod.spline.design/4801VJdy440W2CV4/scene.splinecode"
-          style={{ width: '100%', height: '100%' }}
+          style={{ 
+            width: '100%', 
+            height: '100%',
+            transform: 'translateZ(0)',
+            contain: 'layout style paint',
+            willChange: 'transform'
+          }}
         ></spline-viewer>
       </div>
       

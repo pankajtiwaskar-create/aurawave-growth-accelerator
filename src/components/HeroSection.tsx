@@ -1,7 +1,10 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Spline from '@splinetool/react-spline';
+import { useState } from 'react';
+
 const HeroSection = () => {
+  const [splineError, setSplineError] = useState(false);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -51,10 +54,23 @@ const HeroSection = () => {
           animationDelay: '0.3s'
         }}>
             <div className="relative">
-              <Spline
-                scene="https://prod.spline.design/Gcf-Qg0h2WFothfj/scene.splinecode"
-                className="w-full h-[500px] lg:h-[600px]"
-              />
+              {!splineError ? (
+                <Spline
+                  scene="https://prod.spline.design/Gcf-Qg0h2WFothfj/scene.splinecode"
+                  className="w-full h-[500px] lg:h-[600px]"
+                  onError={() => setSplineError(true)}
+                />
+              ) : (
+                <div className="w-full h-[500px] lg:h-[600px] flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg border border-primary/20">
+                  <div className="text-center">
+                    <div className="w-24 h-24 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center">
+                      <Play className="h-12 w-12 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">3D Animation</h3>
+                    <p className="text-muted-foreground">WebGL not supported on this device</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

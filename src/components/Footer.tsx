@@ -52,10 +52,10 @@ const Footer = () => {
     <footer className="bg-background dark:bg-slate-900 border-t border-border/50 dark:border-slate-700/30 transition-colors duration-500">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         {/* Main Footer Content */}
-        <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+        <div className="py-20 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
           
-          {/* Company Info */}
-          <div className="lg:col-span-1 animate-fade-in-up space-y-6">
+          {/* Company Info - 40% width */}
+          <div className="md:col-span-1 lg:pr-8 animate-fade-in-up space-y-6">
             <div className="flex items-center space-x-3 group cursor-pointer">
               <img 
                 src={auraWaveLogo} 
@@ -89,7 +89,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links - 30% width */}
           <div className="animate-fade-in-up space-y-6" style={{ animationDelay: '0.1s' }}>
             <h3 className="font-bold text-lg text-foreground">Quick Links</h3>
             <nav className="space-y-4">
@@ -108,7 +108,7 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Social Media & Contact */}
+          {/* Social Media & Contact - 30% width */}
           <div className="animate-fade-in-up space-y-6" style={{ animationDelay: '0.2s' }}>
             <h3 className="font-bold text-lg text-foreground">Connect With Us</h3>
             
@@ -159,40 +159,6 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Newsletter Signup */}
-          <div className="animate-fade-in-up space-y-6" style={{ animationDelay: '0.3s' }}>
-            <h3 className="font-bold text-lg text-foreground">Let's Talk Growth</h3>
-            
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Get exclusive insights on performance marketing trends in Southeast Asia.
-            </p>
-            
-            <form onSubmit={handleNewsletterSubmit} className="space-y-4">
-              <div className="relative group">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-muted dark:bg-slate-800 border-border/50 focus:border-primary/50 focus:ring-primary/20 transition-all duration-300 text-sm rounded-lg py-3"
-                  required
-                />
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 -z-10"></div>
-              </div>
-              
-              <Button 
-                type="submit"
-                className="w-full bg-gradient-to-r from-primary to-secondary text-white font-medium text-sm py-3 rounded-lg hover:scale-105 transition-all duration-300 group relative overflow-hidden"
-              >
-                <span className="relative z-10 flex items-center justify-center space-x-2">
-                  <span>Subscribe</span>
-                  <ArrowRight className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Button>
-            </form>
           </div>
         </div>
 

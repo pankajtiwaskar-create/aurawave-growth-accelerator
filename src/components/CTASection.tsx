@@ -22,7 +22,9 @@ const CTASection = () => {
           {/* Header */}
           <div className="mb-8">
             <div className="flex justify-center items-center space-x-2 mb-4">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current icon-glow animate-pulse" style={{animationDelay: `${i * 0.1}s`}} />)}
+              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current icon-glow animate-pulse" style={{
+              animationDelay: `${i * 0.1}s`
+            }} />)}
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Ready to Scale Your Brand in{' '}
@@ -64,22 +66,7 @@ const CTASection = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-12 pt-8 border-t border-border/50">
-            <p className="text-sm text-muted-foreground mb-4">
-              ✅ Free consultation • ✅ No long-term contracts • ✅ Transparent reporting
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span>Meta Business Partner</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span>Google Partner</span>
-              </span>
-              
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>;

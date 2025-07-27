@@ -39,21 +39,37 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="text-center animate-fade-in-up mx-[10px]">
+          <div className="text-center lg:text-left animate-fade-in-up">
+            {/* Small header text */}
+            <div className="inline-block px-4 py-2 rounded-full border border-primary/20 bg-primary/5 mb-6">
+              <span className="text-sm text-muted-foreground uppercase tracking-wider">
+                NEXT GENERATION OF PAID MEDIA
+              </span>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
               Accelerate Growth with{' '}
-              <span className="text-glow">Paid Media</span>{' '}
-              That Delivers
+              <span className="bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent">
+                AI-
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent">
+                Powered Media Campaigns
+              </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl">
-              Helping ambitious brands win across Southeast Asia with data-driven campaigns, 
-              AI-powered optimization, and proven performance strategies.
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">
+              AuraWave combines artificial intelligence with cutting-edge media 
+              strategies to help you maximize your Southeast Asia investments with precision 
+              and ease.
             </p>
 
-            <div className="flex justify-center">
-              <Button size="lg" onClick={() => scrollToSection('contact')} className="btn-hero text-lg px-8 py-4 text-gray-50">
-                Book Free Strategy Call
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button size="lg" onClick={() => scrollToSection('contact')} className="btn-hero text-lg px-8 py-4">
+                Get Started
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-primary/20 hover:bg-primary/10">
+                Learn how it works
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>

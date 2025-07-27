@@ -74,8 +74,8 @@ const AboutSection = () => {
             {/* Tech visualization image */}
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop&crop=center"
-                alt="Technology and data visualization"
+                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop&crop=center"
+                alt="Social media campaigns and digital marketing"
                 className="w-full h-64 object-cover rounded-xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent rounded-xl"></div>

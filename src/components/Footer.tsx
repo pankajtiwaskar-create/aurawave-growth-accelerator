@@ -50,12 +50,13 @@ const Footer = () => {
 
   return (
     <footer className="bg-background dark:bg-slate-900 border-t border-border/50 dark:border-slate-700/30 transition-colors duration-500">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         {/* Main Footer Content */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+          
           {/* Company Info */}
-          <div className="lg:col-span-1 animate-fade-in-up">
-            <div className="flex items-center space-x-3 mb-6 group cursor-pointer">
+          <div className="lg:col-span-1 animate-fade-in-up space-y-6">
+            <div className="flex items-center space-x-3 group cursor-pointer">
               <img 
                 src={auraWaveLogo} 
                 alt="AuraWave Digital" 
@@ -66,18 +67,18 @@ const Footer = () => {
               </span>
             </div>
             
-            <p className="text-muted-foreground text-base mb-6 leading-relaxed">
+            <p className="text-muted-foreground text-base leading-relaxed">
               Accelerating growth for ambitious brands across Southeast Asia with 
               data-driven paid media campaigns and AI-powered optimization.
             </p>
 
-            <div className="space-y-3">
+            <div className="space-y-4">
               <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors duration-300 group">
-                <MapPin className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
+                <MapPin className="w-4 h-4 transition-transform duration-300 group-hover:scale-110 flex-shrink-0" />
                 <span className="text-sm">Southeast Asia (Remote)</span>
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors duration-300 group">
-                <Mail className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
+                <Mail className="w-4 h-4 transition-transform duration-300 group-hover:scale-110 flex-shrink-0" />
                 <a 
                   href="mailto:hello@aurawavedigital.com" 
                   className="text-sm hover:text-primary transition-colors duration-300 relative link-underline"
@@ -89,14 +90,14 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <h3 className="font-bold text-lg mb-6 text-foreground">Quick Links</h3>
-            <nav className="space-y-3">
+          <div className="animate-fade-in-up space-y-6" style={{ animationDelay: '0.1s' }}>
+            <h3 className="font-bold text-lg text-foreground">Quick Links</h3>
+            <nav className="space-y-4">
               {quickLinks.map((link, index) => (
                 <button
                   key={link.label}
                   onClick={() => scrollToSection(link.href)}
-                  className="block text-muted-foreground hover:text-primary transition-all duration-300 text-sm relative link-underline group"
+                  className="block text-muted-foreground hover:text-primary transition-all duration-300 text-sm relative link-underline group text-left"
                   style={{ animationDelay: `${0.2 + index * 0.05}s` }}
                 >
                   <span className="transition-transform duration-300 group-hover:translate-x-1 inline-block">
@@ -108,11 +109,11 @@ const Footer = () => {
           </div>
 
           {/* Social Media & Contact */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <h3 className="font-bold text-lg mb-6 text-foreground">Connect With Us</h3>
+          <div className="animate-fade-in-up space-y-6" style={{ animationDelay: '0.2s' }}>
+            <h3 className="font-bold text-lg text-foreground">Connect With Us</h3>
             
             {/* Social Links */}
-            <div className="mb-6">
+            <div className="space-y-4">
               <div className="flex space-x-3">
                 {socialLinks.map((social) => (
                   <a
@@ -128,54 +129,54 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-            </div>
 
-            {/* Contact Numbers */}
-            <div className="space-y-3">
-              <div className="group">
-                <h4 className="font-semibold mb-1 text-sm text-foreground">India</h4>
-                <div className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-300">
-                  <Phone className="w-3 h-3 transition-transform duration-300 group-hover:scale-110" />
-                  <a 
-                    href="tel:+919923765568" 
-                    className="text-xs hover:text-primary transition-colors duration-300 link-underline"
-                  >
-                    +91 99237 65568
-                  </a>
+              {/* Contact Numbers */}
+              <div className="space-y-4">
+                <div className="group">
+                  <h4 className="font-semibold mb-2 text-sm text-foreground">India</h4>
+                  <div className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-300">
+                    <Phone className="w-3 h-3 transition-transform duration-300 group-hover:scale-110 flex-shrink-0" />
+                    <a 
+                      href="tel:+919923765568" 
+                      className="text-xs hover:text-primary transition-colors duration-300 link-underline"
+                    >
+                      +91 99237 65568
+                    </a>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="group">
-                <h4 className="font-semibold mb-1 text-sm text-foreground">Vietnam</h4>
-                <div className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-300">
-                  <Phone className="w-3 h-3 transition-transform duration-300 group-hover:scale-110" />
-                  <a 
-                    href="tel:+84902421192" 
-                    className="text-xs hover:text-primary transition-colors duration-300 link-underline"
-                  >
-                    +84 90242 1192
-                  </a>
+                
+                <div className="group">
+                  <h4 className="font-semibold mb-2 text-sm text-foreground">Vietnam</h4>
+                  <div className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-300">
+                    <Phone className="w-3 h-3 transition-transform duration-300 group-hover:scale-110 flex-shrink-0" />
+                    <a 
+                      href="tel:+84902421192" 
+                      className="text-xs hover:text-primary transition-colors duration-300 link-underline"
+                    >
+                      +84 90242 1192
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Newsletter Signup */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <h3 className="font-bold text-lg mb-6 text-foreground">Let's Talk Growth</h3>
+          <div className="animate-fade-in-up space-y-6" style={{ animationDelay: '0.3s' }}>
+            <h3 className="font-bold text-lg text-foreground">Let's Talk Growth</h3>
             
-            <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Get exclusive insights on performance marketing trends in Southeast Asia.
             </p>
             
-            <form onSubmit={handleNewsletterSubmit} className="space-y-3">
+            <form onSubmit={handleNewsletterSubmit} className="space-y-4">
               <div className="relative group">
                 <Input
                   type="email"
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-muted dark:bg-slate-800 border-border/50 focus:border-primary/50 focus:ring-primary/20 transition-all duration-300 text-sm rounded-lg"
+                  className="w-full bg-muted dark:bg-slate-800 border-border/50 focus:border-primary/50 focus:ring-primary/20 transition-all duration-300 text-sm rounded-lg py-3"
                   required
                 />
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 -z-10"></div>
@@ -183,7 +184,7 @@ const Footer = () => {
               
               <Button 
                 type="submit"
-                className="w-full bg-gradient-to-r from-primary to-secondary text-white font-medium text-sm py-2.5 rounded-lg hover:scale-105 transition-all duration-300 group relative overflow-hidden"
+                className="w-full bg-gradient-to-r from-primary to-secondary text-white font-medium text-sm py-3 rounded-lg hover:scale-105 transition-all duration-300 group relative overflow-hidden"
               >
                 <span className="relative z-10 flex items-center justify-center space-x-2">
                   <span>Subscribe</span>
@@ -196,13 +197,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 border-t border-border/50 dark:border-slate-700/30 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="py-8 border-t border-border/50 dark:border-slate-700/30 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <p className="text-muted-foreground text-sm">
               © {currentYear} AuraWave Digital. All rights reserved.
             </p>
             
-            <div className="flex items-center space-x-6 text-sm">
+            <div className="flex items-center space-x-8 text-sm">
               <button className="text-muted-foreground hover:text-primary transition-colors duration-300 link-underline">
                 Privacy Policy
               </button>

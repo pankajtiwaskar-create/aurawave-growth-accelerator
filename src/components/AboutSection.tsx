@@ -46,24 +46,32 @@ const AboutSection = () => {
               <div className="flex items-start space-x-4">
                 <div className="w-2 h-2 bg-primary rounded-full mt-3"></div>
                 <div>
-                  <h4 className="font-semibold mb-1">AI-Powered Optimization</h4>
-                  <p className="text-muted-foreground">Machine learning algorithms that continuously optimize your campaigns for maximum performance.</p>
+                  <h4 className="font-semibold mb-1">AI-Led Performance Engine</h4>
+                  <p className="text-muted-foreground">We leverage AI and machine learning to constantly optimize campaigns, identify micro-trends, and drive smarter decisions in real time.</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <div className="w-2 h-2 bg-secondary rounded-full mt-3"></div>
                 <div>
-                  <h4 className="font-semibold mb-1">Regional Market Expertise</h4>
-                  <p className="text-muted-foreground">Deep understanding of Southeast Asian consumer behavior and market dynamics.</p>
+                  <h4 className="font-semibold mb-1">SEA Market Domination</h4>
+                  <p className="text-muted-foreground">We're not generalists—we deeply understand the nuances of Southeast Asian markets, from consumer behavior to cultural buying triggers.</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <div className="w-2 h-2 bg-primary-glow rounded-full mt-3"></div>
                 <div>
-                  <h4 className="font-semibold mb-1">Transparent Reporting</h4>
-                  <p className="text-muted-foreground">Real-time dashboards with actionable insights and clear ROI metrics.</p>
+                  <h4 className="font-semibold mb-1">Senior Expertise, Startup Agility</h4>
+                  <p className="text-muted-foreground">You get access to senior strategists with 12+ years of experience, minus the slow-moving agency red tape. Faster pivots, sharper focus.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-2 h-2 bg-accent rounded-full mt-3"></div>
+                <div>
+                  <h4 className="font-semibold mb-1">ROI-Driven, Not Just Impressions</h4>
+                  <p className="text-muted-foreground">Every dollar spent is tied to measurable growth. We obsess over conversion metrics—not just reach or vanity numbers.</p>
                 </div>
               </div>
             </div>

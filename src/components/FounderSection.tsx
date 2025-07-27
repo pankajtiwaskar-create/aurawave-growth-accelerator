@@ -18,19 +18,19 @@ const FounderSection = () => {
   }];
   const achievements = [{
     icon: Award,
-    text: "Experience in 5+ Markets",
+    text: "15+ years of experience",
     description: "Leading performance marketing initiatives"
   }, {
     icon: Users,
-    text: "$50M+ Media Spend Managed",
+    text: "$50M+ Media Spends Managed",
     description: "Across global advertising platforms"
   }, {
     icon: Briefcase,
-    text: "50+ Brands Scaled",
+    text: "30+ Brands Scaled",
     description: "From seed stage to enterprise"
   }, {
     icon: Globe,
-    text: "Active in 5+ Markets",
+    text: "Experience in 5+ Asia Markets",
     description: "India, Japan, Singapore, Vietnam, Australia"
   }];
   return <section id="founder" className="section-padding">

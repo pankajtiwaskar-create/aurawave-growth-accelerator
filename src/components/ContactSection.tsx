@@ -112,7 +112,7 @@ const ContactSection = () => {
               <div className="space-y-4">
                 <Button variant="outline" className="w-full justify-start h-auto p-4 btn-ghost group" onClick={() => window.open('https://wa.me/919923765568', '_blank')}>
                   <div className="w-8 h-8 icon-glow flex items-center justify-center mr-3 group-hover:scale-110 transition-all duration-300">
-                    <MessageSquare className="w-5 h-5 text-white" />
+                    <MessageSquare className="w-5 h-5 text-muted-foreground dark:text-white" />
                   </div>
                   <div className="text-left">
                     <div className="font-semibold">WhatsApp Chat</div>
@@ -122,7 +122,7 @@ const ContactSection = () => {
 
                 <Button variant="outline" className="w-full justify-start h-auto p-4 btn-ghost group" onClick={() => window.open('https://calendly.com/aurawave-digital', '_blank')}>
                   <div className="w-8 h-8 icon-glow flex items-center justify-center mr-3 group-hover:scale-110 transition-all duration-300">
-                    <Calendar className="w-5 h-5 text-white" />
+                    <Calendar className="w-5 h-5 text-muted-foreground dark:text-white" />
                   </div>
                   <div className="text-left">
                     <div className="font-semibold">Schedule Strategy Call</div>
@@ -132,7 +132,7 @@ const ContactSection = () => {
 
                 <Button variant="outline" className="w-full justify-start h-auto p-4 btn-ghost group" onClick={() => window.location.href = 'mailto:marketing@aurawavedigital.com'}>
                   <div className="w-8 h-8 icon-glow flex items-center justify-center mr-3 group-hover:scale-110 transition-all duration-300">
-                    <Mail className="w-5 h-5 text-white" />
+                    <Mail className="w-5 h-5 text-muted-foreground dark:text-white" />
                   </div>
                   <div className="text-left">
                     <div className="font-semibold">Email Us</div>

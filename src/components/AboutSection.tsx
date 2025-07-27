@@ -78,34 +78,21 @@ const AboutSection = () => {
           </div>
 
           {/* Right Content - Image and Stats */}
-          <div className="space-y-8 animate-scale-in" style={{ animationDelay: '0.3s' }}>
+          <div className="space-y-8 animate-scale-in" style={{
+          animationDelay: '0.3s'
+        }}>
             {/* Tech visualization image */}
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop&crop=center"
-                alt="Social media campaigns and digital marketing"
-                className="w-full h-64 object-cover rounded-xl shadow-lg"
-              />
+              <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop&crop=center" alt="Social media campaigns and digital marketing" className="w-full h-64 object-cover rounded-xl shadow-lg" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent rounded-xl"></div>
             </div>
             
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <div key={index} className="bg-card/50 backdrop-blur-sm rounded-lg p-4 border border-border/50 group hover:bg-card transition-all duration-300">
-                    <div className="flex items-center mb-2">
-                      <div className="w-8 h-8 icon-glow flex items-center justify-center mr-2 group-hover:scale-110 transition-all duration-300">
-                        <Icon className="w-5 h-5 text-muted-foreground dark:text-white" />
-                      </div>
-                      <span className="text-2xl font-bold text-foreground">{stat.number}</span>
-                    </div>
-                    <h4 className="font-semibold text-sm mb-1">{stat.label}</h4>
-                    <p className="text-xs text-muted-foreground">{stat.description}</p>
-                  </div>
-                );
-              })}
+              const Icon = stat.icon;
+              return;
+            })}
             </div>
           </div>
         </div>

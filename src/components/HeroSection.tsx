@@ -71,10 +71,7 @@ const HeroSection = () => {
           <Button size="lg" onClick={() => scrollToSection('contact')} className="btn-hero text-lg px-8 py-4 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-primary/25 transition-all duration-300">
             Get Started
           </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-primary/20 hover:bg-primary/10 backdrop-blur-sm">
-            Learn how it works
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          
         </div>
 
         {/* Dashboard Preview */}

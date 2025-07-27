@@ -21,15 +21,17 @@ const HeroSection = () => {
       });
     }
   };
-  return <section id="hero" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-background">
-      {/* Background with ambient lighting */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-primary/5"></div>
+  return <section id="hero" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+      {/* 3D Spline Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <Spline
+          scene="https://prod.spline.design/6Wq1Q5tKNolPgWyj/scene.splinecode"
+          className="w-full h-full"
+        />
+      </div>
       
-      {/* Ambient light effects */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-      <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl opacity-40 animate-pulse" style={{
-      animationDelay: '1s'
-    }}></div>
+      {/* Overlay gradient for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/40 pointer-events-none"></div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">

@@ -48,7 +48,7 @@ const FounderSection = () => {
           {/* Founder Profile */}
           <div className="lg:col-span-1 text-center animate-scale-in">
             <div className="relative inline-block mb-6">
-              <div className="w-48 h-48 mx-auto rounded-full overflow-hidden shadow-elegant ring-4 ring-primary/20">
+              <div className="w-48 h-48 mx-auto rounded-2xl overflow-hidden shadow-elegant ring-4 ring-primary/20">
                 <img 
                   src="/lovable-uploads/f0f73619-1c03-49b4-901a-3c466c3438fc.png"
                   alt="Pankaj Tiwaskar"

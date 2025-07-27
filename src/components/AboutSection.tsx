@@ -1,35 +1,27 @@
 import { Award, TrendingUp, Globe, Zap } from 'lucide-react';
-
 const AboutSection = () => {
-  const stats = [
-    {
-      icon: Award,
-      number: "12+",
-      label: "Years of Experience",
-      description: "Proven track record in performance marketing"
-    },
-    {
-      icon: TrendingUp,
-      number: "$50M+",
-      label: "Media Spend Managed",
-      description: "Across all major advertising platforms"
-    },
-    {
-      icon: Globe,
-      number: "50+",
-      label: "Brands Scaled",
-      description: "From startups to enterprise companies"
-    },
-    {
-      icon: Zap,
-      number: "5+",
-      label: "SEA Markets",
-      description: "India, Japan, Singapore, Vietnam, Australia"
-    }
-  ];
-
-  return (
-    <section id="about" className="section-padding bg-muted/30">
+  const stats = [{
+    icon: Award,
+    number: "12+",
+    label: "Years of Experience",
+    description: "Proven track record in performance marketing"
+  }, {
+    icon: TrendingUp,
+    number: "$50M+",
+    label: "Media Spend Managed",
+    description: "Across all major advertising platforms"
+  }, {
+    icon: Globe,
+    number: "50+",
+    label: "Brands Scaled",
+    description: "From startups to enterprise companies"
+  }, {
+    icon: Zap,
+    number: "5+",
+    label: "SEA Markets",
+    description: "India, Japan, Singapore, Vietnam, Australia"
+  }];
+  return <section id="about" className="section-padding bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -78,35 +70,13 @@ const AboutSection = () => {
           </div>
 
           {/* Right Stats Grid */}
-          <div className="grid grid-cols-2 gap-6 animate-scale-in" style={{ animationDelay: '0.3s' }}>
-            {stats.map((stat, index) => (
-              <div 
-                key={index} 
-                className="card-3d text-center group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-elegant group-hover:shadow-glow transition-all duration-300">
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <div className="text-3xl font-bold text-glow mb-2">
-                  {stat.number}
-                </div>
-                
-                <h4 className="font-semibold mb-2 text-foreground">
-                  {stat.label}
-                </h4>
-                
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {stat.description}
-                </p>
-              </div>
-            ))}
+          <div className="grid grid-cols-2 gap-6 animate-scale-in" style={{
+          animationDelay: '0.3s'
+        }}>
+            {stats.map((stat, index) => {})}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;

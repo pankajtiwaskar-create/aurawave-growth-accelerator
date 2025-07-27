@@ -18,7 +18,7 @@ const FounderSection = () => {
   }];
   const achievements = [{
     icon: Award,
-    text: "12+ Years of Experience",
+    text: "Experience in 5+ Markets",
     description: "Leading performance marketing initiatives"
   }, {
     icon: Users,

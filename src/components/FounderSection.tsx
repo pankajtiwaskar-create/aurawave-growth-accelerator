@@ -53,15 +53,9 @@ const FounderSection = () => {
           <div className="lg:col-span-1 text-center animate-scale-in">
             <div className="relative inline-block mb-6">
               <div className="w-48 h-48 mx-auto rounded-2xl overflow-hidden shadow-elegant ring-4 ring-primary/20">
-                <img 
-                  src="/lovable-uploads/f0f73619-1c03-49b4-901a-3c466c3438fc.png"
-                  alt="Pankaj Tiwaskar"
-                  className="w-full h-full object-cover"
-                />
+                <img src="/lovable-uploads/f0f73619-1c03-49b4-901a-3c466c3438fc.png" alt="Pankaj Tiwaskar" className="w-full h-full object-cover" />
               </div>
-              <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-secondary rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">CEO</span>
-              </div>
+              
             </div>
             
             <h3 className="text-2xl font-bold mb-2">Pankaj Tiwaskar</h3>
@@ -81,14 +75,9 @@ const FounderSection = () => {
           }}>
                 <div className="flex items-start space-x-4">
                   <div className="relative flex-shrink-0">
-                    <img 
-                      src={achievement.icon} 
-                      alt={achievement.text}
-                      className="w-14 h-14 object-contain transform transition-all duration-300 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-                      style={{
-                        filter: 'grayscale(20%) brightness(0.9) contrast(1.1)',
-                      }}
-                    />
+                    <img src={achievement.icon} alt={achievement.text} className="w-14 h-14 object-contain transform transition-all duration-300 group-hover:scale-110 opacity-80 group-hover:opacity-100" style={{
+                  filter: 'grayscale(20%) brightness(0.9) contrast(1.1)'
+                }} />
                   </div>
                   
                   <div className="flex-1">

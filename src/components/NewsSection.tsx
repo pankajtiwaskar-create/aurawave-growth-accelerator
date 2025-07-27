@@ -54,7 +54,51 @@ const NewsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {articles.map((article, index) => {})}
+          {articles.map((article, index) => (
+            <article
+              key={article.id}
+              className="group bg-card rounded-xl border border-border/50 overflow-hidden hover:border-primary/20 transition-all duration-300 cursor-pointer animate-fade-in-up"
+              style={{ animationDelay: `${0.1 * index}s` }}
+              onClick={() => handleArticleClick(article.id)}
+            >
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
+              <div className="p-6">
+                <div className="flex items-center gap-4 mb-3 text-sm text-muted-foreground">
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded-md font-medium">
+                    {article.category}
+                  </span>
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-4 h-4" />
+                    <span>{article.date}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-4 h-4" />
+                    <span>{article.readTime}</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                  {article.title}
+                </h3>
+                
+                <p className="text-muted-foreground mb-4 line-clamp-2">
+                  {article.excerpt}
+                </p>
+                
+                <div className="flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                  Read More
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
 
         {/* View All Articles CTA */}

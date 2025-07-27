@@ -73,7 +73,22 @@ const AboutSection = () => {
           <div className="grid grid-cols-2 gap-6 animate-scale-in" style={{
           animationDelay: '0.3s'
         }}>
-            {stats.map((stat, index) => {})}
+            {stats.map((stat, index) => (
+              <div
+                key={stat.label}
+                className="bg-card p-6 rounded-xl border border-border/50 backdrop-blur-sm hover:border-primary/20 transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.1 * index}s` }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <stat.icon className="w-6 h-6 text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-3xl font-bold mb-2">{stat.number}</h3>
+                <h4 className="font-semibold mb-1">{stat.label}</h4>
+                <p className="text-sm text-muted-foreground">{stat.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -2,6 +2,17 @@ import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Spline from '@splinetool/react-spline';
 import { useState, useEffect } from 'react';
+
+// TypeScript declaration for spline-viewer web component
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'spline-viewer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+        url?: string;
+      };
+    }
+  }
+}
 const HeroSection = () => {
   const [splineError, setSplineError] = useState(false);
   const [webglSupported, setWebglSupported] = useState(true);
@@ -21,15 +32,17 @@ const HeroSection = () => {
       });
     }
   };
-  return <section id="hero" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-background">
-      {/* Background with ambient lighting */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-primary/5"></div>
+  return <section id="hero" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+      {/* 3D Spline Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <spline-viewer 
+          url="https://prod.spline.design/4801VJdy440W2CV4/scene.splinecode"
+          style={{ width: '100%', height: '100%' }}
+        ></spline-viewer>
+      </div>
       
-      {/* Ambient light effects */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-      <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl opacity-40 animate-pulse" style={{
-      animationDelay: '1s'
-    }}></div>
+      {/* Overlay gradient for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/50 pointer-events-none"></div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">

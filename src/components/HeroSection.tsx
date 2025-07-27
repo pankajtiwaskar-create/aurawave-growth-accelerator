@@ -16,6 +16,8 @@ declare global {
 const HeroSection = () => {
   const [splineError, setSplineError] = useState(false);
   const [webglSupported, setWebglSupported] = useState(true);
+  const [isHeroVisible, setIsHeroVisible] = useState(true);
+  
   useEffect(() => {
     // Check for WebGL support
     const canvas = document.createElement('canvas');
@@ -23,6 +25,19 @@ const HeroSection = () => {
     if (!gl) {
       setWebglSupported(false);
     }
+
+    // Track scroll position to hide globe when not in hero section
+    const handleScroll = () => {
+      const heroSection = document.getElementById('hero');
+      if (heroSection) {
+        const rect = heroSection.getBoundingClientRect();
+        const isVisible = rect.bottom > 0 && rect.top < window.innerHeight;
+        setIsHeroVisible(isVisible);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -33,13 +48,28 @@ const HeroSection = () => {
     }
   };
   return <section id="hero" className="min-h-screen flex flex-col relative overflow-hidden bg-gray-900">
-      {/* 3D Spline Background */}
-      <div className="absolute inset-0 w-full h-full">
-        <spline-viewer 
-          url="https://prod.spline.design/4801VJdy440W2CV4/scene.splinecode"
-          style={{ width: '100%', height: '100%' }}
-        ></spline-viewer>
-      </div>
+      {/* 3D Spline Background - Fixed positioning to prevent scrolling */}
+      {isHeroVisible && (
+        <div 
+          className="fixed inset-0 w-full h-full z-0"
+          style={{
+            willChange: 'transform',
+            transform: 'translateZ(0)',
+            backfaceVisibility: 'hidden',
+            contain: 'layout style paint'
+          }}
+        >
+          <spline-viewer 
+            url="https://prod.spline.design/4801VJdy440W2CV4/scene.splinecode"
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              pointerEvents: 'none',
+              transformStyle: 'preserve-3d'
+            }}
+          ></spline-viewer>
+        </div>
+      )}
       
       {/* Dark overlay for consistent dark theme */}
       <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>

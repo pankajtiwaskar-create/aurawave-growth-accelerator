@@ -231,12 +231,7 @@
   }
   
   .hero-text-light {
-    color: hsl(220 26% 10%); /* Very dark text for light mode */
-    text-shadow: 0 1px 4px hsl(0 0% 100% / 0.8);
-  }
-  
-  .dark .hero-text-light {
-    color: hsl(0 0% 98%); /* Light text for dark mode */
+    color: hsl(0 0% 98%); /* Always light text for dark hero */
     text-shadow: 0 2px 8px hsl(0 0% 0% / 0.5);
   }
 }

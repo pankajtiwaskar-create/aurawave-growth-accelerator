@@ -32,7 +32,7 @@ const HeroSection = () => {
       });
     }
   };
-  return <section id="hero" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+  return <section id="hero" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gray-900">
       {/* 3D Spline Background */}
       <div className="absolute inset-0 w-full h-full">
         <spline-viewer 
@@ -41,8 +41,8 @@ const HeroSection = () => {
         ></spline-viewer>
       </div>
       
-      {/* Minimal overlay for text readability */}
-      <div className="absolute inset-0 bg-black/10 dark:bg-black/20 pointer-events-none"></div>
+      {/* Dark overlay for consistent dark theme */}
+      <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">

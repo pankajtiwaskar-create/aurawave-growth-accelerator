@@ -90,9 +90,16 @@ const AboutSection = () => {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return;
-            })}
+                const Icon = stat.icon;
+                return (
+                  <div key={index} className="bg-card p-6 rounded-lg border shadow-sm">
+                    <Icon className="w-8 h-8 text-primary mb-3" />
+                    <div className="text-2xl font-bold mb-1">{stat.number}</div>
+                    <div className="font-semibold text-sm mb-1">{stat.label}</div>
+                    <div className="text-xs text-muted-foreground">{stat.description}</div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

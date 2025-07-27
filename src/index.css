@@ -7,11 +7,11 @@
 /* AuraWave Digital Design System */
 @layer base {
   :root {
-    --background: 220 40% 8%; /* Darker blue background */
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 220 26% 14%; /* Darker text for light mode against 3D background */
 
-    --card: 220 40% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 26% 14%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 220 26% 14%;
@@ -69,10 +69,10 @@
   }
 
   .dark {
-    --background: 220 40% 8%; /* Same darker blue for consistency */
+    --background: 220 26% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 220 40% 10%;
+    --card: 220 26% 8%;
     --card-foreground: 0 0% 98%;
 
     --popover: 220 26% 8%;
@@ -146,11 +146,6 @@
   /* Card Hover Effects */
   .card-hover {
     @apply transition-all duration-300 hover:scale-105 hover:shadow-card;
-  }
-
-  /* Purple glow on card hover */
-  .card-3d:hover {
-    box-shadow: 0 10px 30px -10px hsl(264 51% 55% / 0.4), 0 0 20px hsl(264 51% 55% / 0.2);
   }
 
   /* Text Glow Effect */

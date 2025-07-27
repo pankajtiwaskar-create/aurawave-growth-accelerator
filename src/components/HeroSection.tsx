@@ -34,19 +34,11 @@ const HeroSection = () => {
   };
   return <section id="hero" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gray-900">
       {/* 3D Spline Background */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <div className="absolute inset-0" style={{ 
-          width: '125%', 
-          height: '125%', 
-          left: '-12.5%', 
-          top: '-12.5%',
-          position: 'fixed'
-        }}>
-          <spline-viewer 
-            url="https://prod.spline.design/4801VJdy440W2CV4/scene.splinecode"
-            style={{ width: '100%', height: '100%' }}
-          ></spline-viewer>
-        </div>
+      <div className="absolute inset-0 w-full h-full">
+        <spline-viewer 
+          url="https://prod.spline.design/4801VJdy440W2CV4/scene.splinecode"
+          style={{ width: '100%', height: '100%' }}
+        ></spline-viewer>
       </div>
       
       {/* Dark overlay for consistent dark theme */}

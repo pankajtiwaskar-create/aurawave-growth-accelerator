@@ -68,12 +68,11 @@ const ServicesSection = () => {
                   <img 
                     src={service.icon} 
                     alt={service.title}
-                    className="w-20 h-20 object-contain transform transition-all duration-300 group-hover:scale-110"
+                    className="w-16 h-16 object-contain transform transition-all duration-300 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                     style={{
-                      filter: 'drop-shadow(0 6px 16px hsl(var(--primary) / 0.4))',
+                      filter: 'grayscale(20%) brightness(0.9) contrast(1.1)',
                     }}
                   />
-                  <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-primary/30 to-secondary/30 blur-xl -z-10"></div>
                 </div>
                 
                 <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">

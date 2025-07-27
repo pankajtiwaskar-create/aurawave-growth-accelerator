@@ -80,12 +80,11 @@ const AboutSection = () => {
                     <img 
                       src={feature.icon} 
                       alt={feature.title}
-                      className="w-16 h-16 object-contain transform transition-all duration-300 group-hover:scale-110"
+                      className="w-14 h-14 object-contain transform transition-all duration-300 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                       style={{
-                        filter: 'drop-shadow(0 4px 12px hsl(var(--primary) / 0.3))',
+                        filter: 'grayscale(20%) brightness(0.9) contrast(1.1)',
                       }}
                     />
-                    <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-primary/20 to-secondary/20 blur-xl -z-10"></div>
                   </div>
                 </div>
                 <div className="flex-1">

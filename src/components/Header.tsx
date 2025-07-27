@@ -43,7 +43,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 dark:bg-background/70 backdrop-blur-xl border-b border-border/50 dark:border-border/30 transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/85 dark:bg-slate-900/80 backdrop-blur-xl border-b border-border/50 dark:border-slate-700/30 transition-all duration-500 animate-fade-in-up shadow-sm dark:shadow-slate-900/20">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -59,15 +59,17 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
+          <nav className="hidden lg:flex items-center space-x-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            {navItems.map((item, index) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href.substring(1))}
-                className="relative font-medium text-foreground hover:text-primary transition-all duration-300 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group"
+                className="relative font-medium text-foreground/80 hover:text-primary transition-all duration-500 px-4 py-2.5 rounded-xl hover:bg-primary/5 dark:hover:bg-primary/10 group animate-fade-in-up"
+                style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
                 <span className="relative z-10">{item.label}</span>
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full"></div>
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-500 group-hover:w-8 rounded-full"></div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </button>
             ))}
           </nav>
@@ -79,15 +81,17 @@ const Header = () => {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="w-9 h-9 relative overflow-hidden group hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300"
+              className="w-10 h-10 relative overflow-hidden group hover:bg-primary/10 dark:hover:bg-primary/15 transition-all duration-500 rounded-xl animate-fade-in-up"
+              style={{ animationDelay: '0.6s' }}
             >
-              <div className="relative">
+              <div className="relative transition-all duration-500">
                 {isDark ? (
-                  <Sun className="h-4 w-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />
+                  <Sun className="h-5 w-5 transition-all duration-500 group-hover:scale-110 group-hover:rotate-90 text-foreground/80 group-hover:text-amber-500" />
                 ) : (
-                  <Moon className="h-4 w-4 transition-all duration-300 group-hover:scale-110 group-hover:-rotate-12" />
+                  <Moon className="h-5 w-5 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12 text-foreground/80 group-hover:text-blue-500" />
                 )}
               </div>
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -107,11 +111,12 @@ const Header = () => {
             {/* CTA Button */}
             <Button
               onClick={() => scrollToSection('contact')}
-              className="hidden lg:flex relative overflow-hidden group bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-2.5 rounded-xl shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
+              className="hidden lg:flex relative overflow-hidden group bg-gradient-to-r from-primary to-secondary text-white font-semibold px-7 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up"
+              style={{ animationDelay: '0.7s' }}
             >
-              <span className="relative z-10 transition-all duration-300 group-hover:scale-105">Get Started</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-primary/50 to-secondary/50 blur-lg -z-10"></div>
+              <span className="relative z-10 transition-all duration-500 group-hover:scale-105">Get Started</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-xl opacity-0 group-hover:opacity-30 blur-lg transition-opacity duration-500"></div>
             </Button>
           </div>
         </div>

@@ -16,13 +16,13 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 26% 14%;
 
-    /* AuraWave Brand Colors */
-    --primary: 264 41% 35%; /* #3D2C8D */
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 264 51% 45%;
+    /* AuraWave Brand Colors - More Sophisticated */
+    --primary: 225 63% 25%; /* Deep Navy Blue #1E293B */
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 225 83% 35%; /* Brighter Navy */
 
-    --secondary: 219 79% 32%; /* #1E3A8A */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 214 84% 56%; /* Sophisticated Blue #3B82F6 */
+    --secondary-foreground: 0 0% 98%;
 
     --accent: 264 41% 35%;
     --accent-foreground: 0 0% 100%;
@@ -78,12 +78,12 @@
     --popover: 220 26% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 264 51% 55%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 264 61% 65%;
+    --primary: 225 63% 30%; /* Slightly lighter for dark mode */
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 225 83% 40%;
 
-    --secondary: 219 79% 42%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 214 84% 60%;
+    --secondary-foreground: 0 0% 98%;
 
     --accent: 264 51% 55%;
     --accent-foreground: 0 0% 100%;

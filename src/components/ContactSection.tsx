@@ -154,11 +154,11 @@ const ContactSection = () => {
               <h4 className="font-bold text-lg mb-4">We're Remote-First</h4>
               <div className="space-y-3 text-sm">
                 <div>
-                  <div className="font-medium">India Office</div>
+                  <div className="font-medium">India</div>
                   <div className="text-muted-foreground">+91 99237 65568</div>
                 </div>
                 <div>
-                  <div className="font-medium">Vietnam Office</div>
+                  <div className="font-medium">Vietnam</div>
                   <div className="text-muted-foreground">+84 90242 1192</div>
                 </div>
                 <div>

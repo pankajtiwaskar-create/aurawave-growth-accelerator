@@ -8,7 +8,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 26% 14%;
+    --foreground: 220 26% 14%; /* Darker text for light mode against 3D background */
 
     --card: 0 0% 100%;
     --card-foreground: 220 26% 14%;
@@ -222,6 +222,22 @@
   /* Pulse Glow */
   .pulse-glow {
     animation: pulse-glow 2s infinite;
+  }
+
+  /* Hero Text Contrast */
+  .hero-text {
+    @apply text-foreground;
+    text-shadow: 0 2px 8px hsl(0 0% 0% / 0.3);
+  }
+  
+  .hero-text-light {
+    color: hsl(220 26% 10%); /* Very dark text for light mode */
+    text-shadow: 0 1px 4px hsl(0 0% 100% / 0.8);
+  }
+  
+  .dark .hero-text-light {
+    color: hsl(0 0% 98%); /* Light text for dark mode */
+    text-shadow: 0 2px 8px hsl(0 0% 0% / 0.5);
   }
 }
 

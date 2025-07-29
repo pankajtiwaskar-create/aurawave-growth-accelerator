@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Moon, Sun, Menu, X, User, LogOut } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { useAuth } from '@/hooks/useAuth';
 import auraWaveLogo from '/lovable-uploads/10a26a67-60d6-4878-acab-46f09790c371.png';
 
 const Header = () => {
   const [isDark, setIsDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { user, signOut } = useAuth();
 
   useEffect(() => {
     const theme = localStorage.getItem('theme');
@@ -108,16 +111,44 @@ const Header = () => {
               )}
             </Button>
 
-            {/* CTA Button */}
-            <Button
-              onClick={() => scrollToSection('contact')}
-              className="hidden lg:flex relative overflow-hidden group bg-gradient-to-r from-primary to-secondary text-white font-semibold px-7 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up"
-              style={{ animationDelay: '0.7s' }}
-            >
-              <span className="relative z-10 transition-all duration-500 group-hover:scale-105">Get Started</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-xl opacity-0 group-hover:opacity-30 blur-lg transition-opacity duration-500"></div>
-            </Button>
+            {/* Auth Buttons */}
+            {user ? (
+              <div className="hidden lg:flex items-center space-x-3">
+                <span className="text-sm text-muted-foreground">
+                  {user.email}
+                </span>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={signOut}
+                  className="hover:bg-destructive hover:text-destructive-foreground"
+                >
+                  <LogOut className="w-4 h-4 mr-2" />
+                  Sign Out
+                </Button>
+              </div>
+            ) : (
+              <div className="hidden lg:flex items-center space-x-3">
+                <Link to="/auth">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="hover:bg-primary hover:text-primary-foreground"
+                  >
+                    <User className="w-4 h-4 mr-2" />
+                    Sign In
+                  </Button>
+                </Link>
+                <Button
+                  onClick={() => scrollToSection('contact')}
+                  className="relative overflow-hidden group bg-gradient-to-r from-primary to-secondary text-white font-semibold px-7 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105"
+                >
+                  <span className="relative z-10 transition-all duration-500 group-hover:scale-105">Get Started</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-xl opacity-0 group-hover:opacity-30 blur-lg transition-opacity duration-500"></div>
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -135,13 +166,40 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
-            <Button
-              onClick={() => scrollToSection('contact')}
-              className="w-full mt-6 relative overflow-hidden group bg-gradient-to-r from-primary to-secondary text-white font-semibold py-3 rounded-xl shadow-elegant hover:shadow-glow transition-all duration-300"
-            >
-              <span className="relative z-10">Get Started</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </Button>
+            {user ? (
+              <div className="mt-6 space-y-3">
+                <p className="text-sm text-muted-foreground text-center">
+                  Signed in as {user.email}
+                </p>
+                <Button
+                  onClick={signOut}
+                  variant="outline"
+                  className="w-full hover:bg-destructive hover:text-destructive-foreground"
+                >
+                  <LogOut className="w-4 h-4 mr-2" />
+                  Sign Out
+                </Button>
+              </div>
+            ) : (
+              <div className="mt-6 space-y-3">
+                <Link to="/auth" className="block">
+                  <Button
+                    variant="outline"
+                    className="w-full hover:bg-primary hover:text-primary-foreground"
+                  >
+                    <User className="w-4 h-4 mr-2" />
+                    Sign In
+                  </Button>
+                </Link>
+                <Button
+                  onClick={() => scrollToSection('contact')}
+                  className="w-full relative overflow-hidden group bg-gradient-to-r from-primary to-secondary text-white font-semibold py-3 rounded-xl shadow-elegant hover:shadow-glow transition-all duration-300"
+                >
+                  <span className="relative z-10">Get Started</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </Button>
+              </div>
+            )}
           </nav>
         </div>
       )}

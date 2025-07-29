@@ -66,8 +66,7 @@ const Chatbot = () => {
 
   const submitToFormspree = async (data: FormData) => {
     try {
-      // Replace with your actual Formspree endpoint
-      const response = await fetch('https://formspree.io/f/your_form_id', {
+      const response = await fetch('https://formspree.io/f/mvgqrdll', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

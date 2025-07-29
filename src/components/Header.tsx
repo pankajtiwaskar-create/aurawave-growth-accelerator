@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import auraWaveLogo from '@/assets/aurawave-logo.png';
+import auraWaveLogo from '/lovable-uploads/10a26a67-60d6-4878-acab-46f09790c371.png';
 
 const Header = () => {
   const [isDark, setIsDark] = useState(false);

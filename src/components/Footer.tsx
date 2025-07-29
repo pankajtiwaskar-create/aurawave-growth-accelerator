@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Linkedin, Instagram, Twitter, Mail, Phone, MapPin, Send, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import auraWaveLogo from '@/assets/aurawave-logo.png';
+import auraWaveLogo from '/lovable-uploads/10a26a67-60d6-4878-acab-46f09790c371.png';
 
 const Footer = () => {
   const [email, setEmail] = useState('');

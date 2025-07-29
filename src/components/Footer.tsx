@@ -146,17 +146,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             
             
-            <div className="flex items-center space-x-8 text-sm">
-              <button className="text-muted-foreground hover:text-primary transition-colors duration-300 link-underline">
-                Privacy Policy
-              </button>
-              <button className="text-muted-foreground hover:text-primary transition-colors duration-300 link-underline">
-                Terms of Service
-              </button>
-              <button className="text-muted-foreground hover:text-primary transition-colors duration-300 link-underline">
-                Cookie Policy
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>

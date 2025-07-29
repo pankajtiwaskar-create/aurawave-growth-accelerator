@@ -68,33 +68,19 @@ const ContactSection = () => {
             <div className="card-3d">
               <h3 className="text-2xl font-bold mb-6">Send us a message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Full Name *
-                  </label>
-                  <Input id="name" name="name" type="text" required value={formData.name} onChange={handleInputChange} placeholder="Enter your full name" className="w-full" />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email Address *
-                  </label>
-                  <Input id="email" name="email" type="email" required value={formData.email} onChange={handleInputChange} placeholder="Enter your email address" className="w-full" />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message *
-                  </label>
-                  <Textarea id="message" name="message" required value={formData.message} onChange={handleInputChange} placeholder="Tell us about your business goals and challenges..." rows={5} className="w-full resize-none" />
-                </div>
-
-                <Button type="submit" disabled={isSubmitting} className="w-full btn-hero">
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                  <Mail className="ml-2 w-5 h-5" />
-                </Button>
-              </form>
+              <div className="flex justify-center">
+                <iframe 
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSdqEib-ZoDXNFomnNC1rYAast2BrFhj7zB49MHUy_XXDGG8tQ/viewform?embedded=true" 
+                  width="640" 
+                  height="642" 
+                  frameBorder="0" 
+                  marginHeight={0} 
+                  marginWidth={0}
+                  className="w-full max-w-full"
+                >
+                  Loading…
+                </iframe>
+              </div>
             </div>
 
             {/* Trust Badges */}

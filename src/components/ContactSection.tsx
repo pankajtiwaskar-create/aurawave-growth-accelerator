@@ -150,10 +150,6 @@ const ContactSection = () => {
                   <div className="text-muted-foreground">+91 99237 65568</div>
                 </div>
                 <div>
-                  <div className="font-medium">Vietnam</div>
-                  <div className="text-muted-foreground">+84 90242 1192</div>
-                </div>
-                <div>
                   <div className="font-medium">Email</div>
                   <div className="text-muted-foreground">marketing@aurawavedigital.com</div>
                 </div>

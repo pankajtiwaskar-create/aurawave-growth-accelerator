@@ -98,41 +98,21 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Social Media & Contact - 30% width */}
+          {/* Contact - 30% width */}
           <div className="animate-fade-in-up space-y-6" style={{
           animationDelay: '0.2s'
         }}>
             <h3 className="font-bold text-lg text-foreground">Connect With Us</h3>
             
-            {/* Social Links */}
+            {/* Contact Numbers */}
             <div className="space-y-4">
-              <div className="flex space-x-3">
-                {socialLinks.map(social => <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-muted dark:bg-slate-800 rounded-xl flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110 group relative overflow-hidden" aria-label={social.label}>
-                    <social.icon className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-                  </a>)}
-              </div>
-
-              {/* Contact Numbers */}
-              <div className="space-y-4">
-                <div className="group">
-                  <h4 className="font-semibold mb-2 text-sm text-foreground">India</h4>
-                  <div className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-300">
-                    <Phone className="w-3 h-3 transition-transform duration-300 group-hover:scale-110 flex-shrink-0" />
-                    <a href="tel:+919923765568" className="text-xs hover:text-primary transition-colors duration-300 link-underline">
-                      +91 99237 65568
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="group">
-                  <h4 className="font-semibold mb-2 text-sm text-foreground">Vietnam</h4>
-                  <div className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-300">
-                    <Phone className="w-3 h-3 transition-transform duration-300 group-hover:scale-110 flex-shrink-0" />
-                    <a href="tel:+84902421192" className="text-xs hover:text-primary transition-colors duration-300 link-underline">
-                      +84 90242 1192
-                    </a>
-                  </div>
+              <div className="group">
+                <h4 className="font-semibold mb-2 text-sm text-foreground">India</h4>
+                <div className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-300">
+                  <Phone className="w-3 h-3 transition-transform duration-300 group-hover:scale-110 flex-shrink-0" />
+                  <a href="tel:+919923765568" className="text-xs hover:text-primary transition-colors duration-300 link-underline">
+                    +91 99237 65568
+                  </a>
                 </div>
               </div>
             </div>

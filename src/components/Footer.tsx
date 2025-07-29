@@ -127,12 +127,7 @@ const Footer = () => {
                 
                 <div className="group">
                   <h4 className="font-semibold mb-2 text-sm text-foreground">Vietnam</h4>
-                  <div className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-300">
-                    
-                    <a href="tel:+84902421192" className="text-xs hover:text-primary transition-colors duration-300 link-underline">
-                      +84 90242 1192
-                    </a>
-                  </div>
+                  
                 </div>
               </div>
             </div>

@@ -16,15 +16,15 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 26% 14%;
 
-    /* AuraWave Brand Colors - More Sophisticated */
-    --primary: 225 63% 25%; /* Deep Navy Blue #1E293B */
+    /* AuraWave Brand Colors - Subtle & Sophisticated */
+    --primary: 220 15% 45%; /* Muted Slate Blue */
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 225 83% 35%; /* Brighter Navy */
+    --primary-glow: 220 25% 55%; /* Subtle Glow */
 
-    --secondary: 214 84% 56%; /* Sophisticated Blue #3B82F6 */
+    --secondary: 215 20% 55%; /* Soft Blue-Gray */
     --secondary-foreground: 0 0% 98%;
 
-    --accent: 264 41% 35%;
+    --accent: 260 15% 50%; /* Muted Purple-Gray */
     --accent-foreground: 0 0% 100%;
 
     --muted: 220 14% 96%;
@@ -44,9 +44,9 @@
     --gradient-accent: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
     
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
-    --shadow-card: 0 4px 20px -4px hsl(var(--foreground) / 0.1);
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
+    --shadow-card: 0 4px 20px -4px hsl(var(--foreground) / 0.05);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -78,14 +78,14 @@
     --popover: 220 26% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 225 63% 30%; /* Slightly lighter for dark mode */
+    --primary: 220 18% 50%; /* Subtle for dark mode */
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 225 83% 40%;
+    --primary-glow: 220 28% 60%;
 
-    --secondary: 214 84% 60%;
+    --secondary: 215 25% 60%;
     --secondary-foreground: 0 0% 98%;
 
-    --accent: 264 51% 55%;
+    --accent: 260 20% 60%;
     --accent-foreground: 0 0% 100%;
 
     --muted: 220 26% 12%;
@@ -102,9 +102,9 @@
     --gradient-accent: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
     
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.5);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.6);
-    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.15);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -174,7 +174,7 @@
   /* 3D Icon Effects */
   .icon-3d {
     @apply relative transform-gpu transition-all duration-300;
-    filter: drop-shadow(0 4px 8px hsl(var(--primary) / 0.3));
+    filter: drop-shadow(0 4px 8px hsl(var(--primary) / 0.15));
     background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
     border-radius: 1rem;
     padding: 0.75rem;
@@ -183,14 +183,14 @@
   .icon-3d::before {
     content: '';
     @apply absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300;
-    background: linear-gradient(135deg, hsl(var(--primary-glow) / 0.6), hsl(var(--secondary) / 0.4));
+    background: linear-gradient(135deg, hsl(var(--primary-glow) / 0.3), hsl(var(--secondary) / 0.2));
     filter: blur(8px);
     z-index: -1;
   }
 
   .icon-3d:hover {
-    @apply scale-110;
-    filter: drop-shadow(0 8px 16px hsl(var(--primary) / 0.4));
+    @apply scale-105;
+    filter: drop-shadow(0 8px 16px hsl(var(--primary) / 0.2));
     animation: icon-float 2s ease-in-out infinite;
   }
 
@@ -200,11 +200,11 @@
 
   .icon-glow {
     @apply transition-all duration-300;
-    filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.5));
+    filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.25));
   }
 
   .icon-glow:hover {
-    filter: drop-shadow(0 0 16px hsl(var(--primary-glow) / 0.8));
+    filter: drop-shadow(0 0 16px hsl(var(--primary-glow) / 0.4));
     animation: icon-pulse 1.5s ease-in-out infinite;
   }
 
@@ -244,8 +244,8 @@
   }
 
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
-    50% { box-shadow: 0 0 30px hsl(var(--primary) / 0.6); }
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.15); }
+    50% { box-shadow: 0 0 30px hsl(var(--primary) / 0.3); }
   }
 
   @keyframes fade-in-up {
@@ -277,12 +277,12 @@
 
   @keyframes icon-pulse {
     0%, 100% { 
-      filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.5));
+      filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.25));
       transform: scale(1);
     }
     50% { 
-      filter: drop-shadow(0 0 20px hsl(var(--primary-glow) / 0.8));
-      transform: scale(1.05);
+      filter: drop-shadow(0 0 20px hsl(var(--primary-glow) / 0.4));
+      transform: scale(1.02);
     }
   }
 

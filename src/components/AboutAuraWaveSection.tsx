@@ -1,6 +1,5 @@
 const AboutAuraWaveSection = () => {
-  return (
-    <section className="section-padding bg-background">
+  return <section className="section-padding bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
@@ -43,7 +42,7 @@ const AboutAuraWaveSection = () => {
                   <span>30-day rolling contracts, no lock-ins</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  
                   <span>Full access to campaign data & insights</span>
                 </div>
               </div>
@@ -55,8 +54,6 @@ const AboutAuraWaveSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutAuraWaveSection;

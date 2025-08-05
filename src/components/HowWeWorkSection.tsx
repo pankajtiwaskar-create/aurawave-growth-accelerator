@@ -28,24 +28,6 @@ const HowWeWorkSection = () => {
     }
   ];
 
-  const businessPrinciples = [
-    {
-      title: "Performance-Based Pricing",
-      description: "We offer flexible pricing models including performance bonuses tied to your success metrics."
-    },
-    {
-      title: "Full Transparency",
-      description: "You get access to all campaign data, weekly reports, and direct communication with your dedicated team."
-    },
-    {
-      title: "No Long-Term Lock-ins",
-      description: "While we prefer partnerships, we work on 30-day rolling contracts. Great results speak louder than contracts."
-    },
-    {
-      title: "Owner's Mindset",
-      description: "We think like business owners, not just marketers. Every dollar spent is treated like our own investment."
-    }
-  ];
 
   return (
     <section className="section-padding bg-muted/30">
@@ -75,23 +57,6 @@ const HowWeWorkSection = () => {
           ))}
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-12">
-            Our Business <span className="text-glow">Philosophy</span>
-          </h3>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {businessPrinciples.map((principle, index) => (
-              <div key={index} className="flex items-start space-x-4 group">
-                <div className="w-2 h-2 bg-primary rounded-full mt-3 group-hover:scale-150 transition-transform duration-300"></div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-2">{principle.title}</h4>
-                  <p className="text-muted-foreground leading-relaxed">{principle.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

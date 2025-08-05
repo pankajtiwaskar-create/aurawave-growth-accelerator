@@ -19,7 +19,24 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Poppins', 'sans-serif'],
+				sans: ['Inter', 'sans-serif'],
+			},
+			fontSize: {
+				'h1': 'var(--font-h1)',
+				'h2': 'var(--font-h2)',
+				'h3': 'var(--font-h3)',
+				'body': 'var(--font-body)',
+			},
+			spacing: {
+				'xs': 'var(--spacing-xs)',
+				'sm': 'var(--spacing-sm)',
+				'md': 'var(--spacing-md)',
+				'lg': 'var(--spacing-lg)',
+				'xl': 'var(--spacing-xl)',
+				'2xl': 'var(--spacing-2xl)',
+			},
+			maxWidth: {
+				'content': 'var(--max-content-width)',
 			},
 			colors: {
 				border: 'hsl(var(--border))',

@@ -75,12 +75,12 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center mt-auto mb-8">
+      <div className="content-container relative z-10 text-center mt-auto mb-lg">
         {/* Small header badge */}
         
         
         {/* Main heading */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 animate-fade-in-up text-gray-100" style={{
+        <h1 className="animate-fade-in-up text-gray-100" style={{
         animationDelay: '0.1s',
         textShadow: '0 0 20px rgba(147, 51, 234, 0.3), 0 0 40px rgba(147, 51, 234, 0.1)'
       }}>
@@ -90,24 +90,24 @@ const HeroSection = () => {
         </h1>
         
         {/* Subheading */}
-        <p className="hero-text-light text-lg md:text-xl mb-6 max-w-3xl mx-auto animate-fade-in-up" style={{
+        <p className="hero-text-light text-xl mb-md max-w-3xl mx-auto animate-fade-in-up" style={{
         animationDelay: '0.2s'
       }}>
           AuraWave is the retainer-based media agency that combines cutting-edge AI technology with proven marketing strategies to deliver consistent, measurable growth for your business—month after month.
         </p>
 
         {/* Supporting Copy */}
-        <p className="hero-text-light text-base md:text-lg mb-8 max-w-4xl mx-auto opacity-90 animate-fade-in-up" style={{
+        <p className="hero-text-light opacity-90 mb-lg max-w-4xl mx-auto animate-fade-in-up" style={{
         animationDelay: '0.25s'
       }}>
           Our AI-driven approach analyzes your market, optimizes your messaging, and scales your success across all channels. With transparent reporting and dedicated account management, you'll know exactly how your investment drives real business results.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up" style={{
+        <div className="flex flex-col sm:flex-row gap-md justify-center mb-2xl animate-fade-in-up" style={{
         animationDelay: '0.3s'
       }}>
-          <Button size="lg" onClick={() => scrollToSection('contact')} className="btn-hero text-lg px-8 py-4 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-primary/25 transition-all duration-300">
+          <Button size="primary" onClick={() => scrollToSection('contact')} className="btn-primary">
             Get Started
           </Button>
           

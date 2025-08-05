@@ -47,16 +47,16 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/85 dark:bg-slate-900/80 backdrop-blur-xl border-b border-border/50 dark:border-slate-700/30 transition-all duration-500 animate-fade-in-up shadow-sm dark:shadow-slate-900/20">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="content-container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3 group cursor-pointer">
             <img 
               src={auraWaveLogo} 
               alt="AuraWave Digital" 
-              className="w-8 h-8 lg:w-10 lg:h-10 transition-transform duration-300 group-hover:scale-110"
+              className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="text-xl lg:text-2xl font-bold text-glow transition-all duration-300 group-hover:scale-105">
+            <span className="text-h3 font-bold text-glow transition-all duration-300 group-hover:scale-105">
               AuraWave Digital
             </span>
           </div>
@@ -140,12 +140,11 @@ const Header = () => {
                   </Button>
                 </Link>
                 <Button
+                  size="primary"
                   onClick={() => scrollToSection('contact')}
-                  className="relative overflow-hidden group bg-gradient-to-r from-primary to-secondary text-white font-semibold px-7 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105"
+                  className="btn-primary"
                 >
-                  <span className="relative z-10 transition-all duration-500 group-hover:scale-105">Get Started</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-xl opacity-0 group-hover:opacity-30 blur-lg transition-opacity duration-500"></div>
+                  Get Started
                 </Button>
               </div>
             )}
@@ -192,11 +191,11 @@ const Header = () => {
                   </Button>
                 </Link>
                 <Button
+                  size="primary"
                   onClick={() => scrollToSection('contact')}
-                  className="w-full relative overflow-hidden group bg-gradient-to-r from-primary to-secondary text-white font-semibold py-3 rounded-xl shadow-elegant hover:shadow-glow transition-all duration-300"
+                  className="w-full btn-primary"
                 >
-                  <span className="relative z-10">Get Started</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  Get Started
                 </Button>
               </div>
             )}

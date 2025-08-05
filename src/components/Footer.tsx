@@ -50,15 +50,15 @@ const Footer = () => {
     setEmail('');
   };
   return <footer className="bg-background dark:bg-slate-900 border-t border-border/50 dark:border-slate-700/30 transition-colors duration-500">
-      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+      <div className="content-container">
         {/* Main Footer Content */}
-        <div className="py-20 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        <div className="section-padding grid grid-cols-1 md:grid-cols-3 gap-lg lg:gap-2xl">
           
           {/* Company Info - 40% width */}
           <div className="md:col-span-1 lg:pr-8 animate-fade-in-up space-y-6">
             <div className="flex items-center space-x-3 group cursor-pointer">
               <img src={auraWaveLogo} alt="AuraWave Digital" className="w-8 h-8 transition-transform duration-300 group-hover:scale-110" />
-              <span className="text-xl font-bold text-glow transition-all duration-300 group-hover:scale-105">
+              <span className="text-h3 font-bold text-glow transition-all duration-300 group-hover:scale-105">
                 AuraWave Digital
               </span>
             </div>
@@ -86,7 +86,7 @@ const Footer = () => {
           <div className="animate-fade-in-up space-y-6" style={{
           animationDelay: '0.1s'
         }}>
-            <h3 className="font-bold text-lg text-foreground">Quick Links</h3>
+            <h3>Quick Links</h3>
             <nav className="space-y-4">
               {quickLinks.map((link, index) => <button key={link.label} onClick={() => scrollToSection(link.href)} className="block text-muted-foreground hover:text-primary transition-all duration-300 text-sm relative link-underline group text-left" style={{
               animationDelay: `${0.2 + index * 0.05}s`
@@ -102,7 +102,7 @@ const Footer = () => {
           <div className="animate-fade-in-up space-y-6" style={{
           animationDelay: '0.2s'
         }}>
-            <h3 className="font-bold text-lg text-foreground">Connect With Us</h3>
+            <h3>Connect With Us</h3>
             
             {/* Contact Numbers */}
             <div className="space-y-4">

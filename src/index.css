@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,14 +7,43 @@
 /* AuraWave Digital Design System */
 @layer base {
   :root {
+    /* Typography Scale */
+    --font-h1: 3rem; /* 48px */
+    --font-h2: 2.25rem; /* 36px */
+    --font-h3: 1.5rem; /* 24px */
+    --font-body: 1rem; /* 16px */
+    --line-height-body: 1.6;
+    --color-text-primary: 213 27% 20%; /* #333 equivalent in HSL */
+    --color-text-secondary: 210 8% 40%; /* #666 equivalent in HSL */
+
+    /* Spacing Scale (8px increments) */
+    --spacing-xs: 0.5rem; /* 8px */
+    --spacing-sm: 1rem; /* 16px */
+    --spacing-md: 1.5rem; /* 24px */
+    --spacing-lg: 2rem; /* 32px */
+    --spacing-xl: 2.5rem; /* 40px */
+    --spacing-2xl: 5rem; /* 80px */
+
+    /* Component Sizes */
+    --button-padding-primary-y: 1rem; /* 16px */
+    --button-padding-primary-x: 2rem; /* 32px */
+    --button-padding-secondary-y: 0.875rem; /* 14px */
+    --button-padding-secondary-x: 1.75rem; /* 28px */
+    --button-radius: 0.5rem; /* 8px */
+    --card-padding: 1.5rem; /* 24px */
+    --card-radius: 1rem; /* 16px */
+    --card-height: 20rem; /* 320px */
+    --card-spacing: 1.5rem; /* 24px */
+    --max-content-width: 75rem; /* 1200px */
+
     --background: 0 0% 100%;
-    --foreground: 220 26% 14%; /* Darker text for light mode against 3D background */
+    --foreground: var(--color-text-primary);
 
     --card: 0 0% 100%;
-    --card-foreground: 220 26% 14%;
+    --card-foreground: var(--color-text-primary);
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 26% 14%;
+    --popover-foreground: var(--color-text-primary);
 
     /* AuraWave Brand Colors - More Sophisticated */
     --primary: 225 63% 25%; /* Deep Navy Blue #1E293B */
@@ -28,7 +57,7 @@
     --accent-foreground: 0 0% 100%;
 
     --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted-foreground: var(--color-text-secondary);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -122,7 +151,47 @@
   }
 
   body {
-    @apply bg-background text-foreground font-['Poppins'] antialiased;
+    @apply bg-background text-foreground font-['Inter'] antialiased;
+    font-size: var(--font-body);
+    line-height: var(--line-height-body);
+  }
+
+  /* Typography Hierarchy */
+  h1 {
+    font-size: var(--font-h1);
+    font-weight: 700;
+    line-height: 1.1;
+    color: hsl(var(--foreground));
+  }
+
+  h2 {
+    font-size: var(--font-h2);
+    font-weight: 600;
+    line-height: 1.2;
+    color: hsl(var(--foreground));
+  }
+
+  h3 {
+    font-size: var(--font-h3);
+    font-weight: 600;
+    line-height: 1.3;
+    color: hsl(var(--foreground));
+  }
+
+  p {
+    font-size: var(--font-body);
+    line-height: var(--line-height-body);
+    color: hsl(var(--foreground));
+  }
+
+  /* Responsive Typography */
+  @media (max-width: 768px) {
+    :root {
+      --font-h1: 2rem; /* 32px on mobile */
+      --font-h2: 1.75rem; /* 28px on mobile */
+      --font-h3: 1.25rem; /* 20px on mobile */
+      --spacing-2xl: 2.5rem; /* 40px on mobile */
+    }
   }
 
   html {
@@ -131,16 +200,30 @@
 }
 
 @layer components {
-  /* Hero Button Variants */
-  .btn-hero {
-    @apply bg-gradient-to-r from-primary to-secondary text-white font-semibold px-8 py-4 rounded-xl 
+  /* Standardized Button Variants */
+  .btn-primary {
+    padding: var(--button-padding-primary-y) var(--button-padding-primary-x);
+    border-radius: var(--button-radius);
+    min-height: 44px; /* Touch target */
+    @apply bg-gradient-to-r from-primary to-secondary text-white font-semibold 
            shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105 
            hover:from-primary-glow hover:to-primary;
   }
 
-  .btn-ghost {
-    @apply border-2 border-primary text-primary bg-transparent font-semibold px-8 py-4 rounded-xl
+  .btn-secondary {
+    padding: var(--button-padding-secondary-y) var(--button-padding-secondary-x);
+    border-radius: var(--button-radius);
+    min-height: 44px; /* Touch target */
+    @apply border-2 border-primary text-primary bg-transparent font-medium
            hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-hero {
+    @apply btn-primary;
+  }
+
+  .btn-ghost {
+    @apply btn-secondary;
   }
 
   /* Card Hover Effects */
@@ -161,7 +244,27 @@
 
   /* Section Spacing */
   .section-padding {
-    @apply py-20 lg:py-32;
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+  }
+
+  .content-container {
+    max-width: var(--max-content-width);
+    @apply mx-auto px-4 lg:px-8;
+  }
+
+  /* Card Standardization */
+  .card-standard {
+    height: var(--card-height);
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    @apply bg-card border border-border shadow-card transition-all duration-300 hover:scale-105 hover:shadow-elegant;
+  }
+
+  .card-grid {
+    display: grid;
+    gap: var(--card-spacing);
+    @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
   }
 
   /* 3D Card Effect */

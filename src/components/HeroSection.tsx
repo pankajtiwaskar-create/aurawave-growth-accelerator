@@ -83,24 +83,29 @@ const HeroSection = () => {
         <h1 className="hero-text-light text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{
         animationDelay: '0.1s'
       }}>
-          Trade Smarter with{' '}
+          Scale Your Business with{' '}
           <span className="bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent">
-            AI-
+            AI-Powered
           </span>
           <br />
+          Media Campaigns That{' '}
           <span className="bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent">
-            Powered
-          </span>{' '}
-          Media Campaigns
+            Actually Convert
+          </span>
         </h1>
         
         {/* Subheading */}
-        <p className="hero-text-light text-lg md:text-xl mb-8 max-w-2xl mx-auto animate-fade-in-up" style={{
+        <p className="hero-text-light text-lg md:text-xl mb-6 max-w-3xl mx-auto animate-fade-in-up" style={{
         animationDelay: '0.2s'
       }}>
-          AuraWave combines artificial intelligence with cutting-edge media 
-          strategies to help you maximize your Southeast Asia investments with precision 
-          and ease.
+          AuraWave is the retainer-based media agency that combines cutting-edge AI technology with proven marketing strategies to deliver consistent, measurable growth for your business—month after month.
+        </p>
+
+        {/* Supporting Copy */}
+        <p className="hero-text-light text-base md:text-lg mb-8 max-w-4xl mx-auto opacity-90 animate-fade-in-up" style={{
+        animationDelay: '0.25s'
+      }}>
+          Our AI-driven approach analyzes your market, optimizes your messaging, and scales your success across all channels. With transparent reporting and dedicated account management, you'll know exactly how your investment drives real business results.
         </p>
 
         {/* CTA Buttons */}

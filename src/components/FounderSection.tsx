@@ -1,8 +1,4 @@
-// Import 3D icon images
-import awardIcon from '@/assets/icons/award-3d.png';
-import globeIcon from '@/assets/icons/globe-3d.png';
-import briefcaseIcon from '@/assets/icons/briefcase-3d.png';
-import usersIcon from '@/assets/icons/users-3d.png';
+import { Award, Globe, Briefcase, DollarSign } from 'lucide-react';
 const FounderSection = () => {
   const clientLogos = [{
     name: 'IBM',
@@ -21,21 +17,25 @@ const FounderSection = () => {
     color: 'text-green-600'
   }];
   const achievements = [{
-    icon: awardIcon,
+    Icon: Award,
     text: "15+ years of experience",
-    description: "Leading performance marketing initiatives"
+    description: "Leading performance marketing initiatives",
+    gradient: "from-yellow-500 to-orange-500"
   }, {
-    icon: usersIcon,
+    Icon: DollarSign,
     text: "$50M+ Media Spends Managed",
-    description: "Across global advertising platforms"
+    description: "Across global advertising platforms",
+    gradient: "from-green-500 to-emerald-500"
   }, {
-    icon: briefcaseIcon,
+    Icon: Briefcase,
     text: "30+ Brands Scaled",
-    description: "From seed stage to enterprise"
+    description: "From seed stage to enterprise",
+    gradient: "from-blue-500 to-cyan-500"
   }, {
-    icon: globeIcon,
+    Icon: Globe,
     text: "Experience in 5+ Asia Markets",
-    description: "India, Japan, Singapore, Vietnam, Australia"
+    description: "India, Japan, Singapore, Vietnam, Australia",
+    gradient: "from-purple-500 to-pink-500"
   }];
   return <section id="founder" className="section-padding">
       <div className="container mx-auto px-4 lg:px-8">
@@ -75,9 +75,19 @@ const FounderSection = () => {
           }}>
                 <div className="flex items-start space-x-4">
                   <div className="relative flex-shrink-0">
-                    <img src={achievement.icon} alt={achievement.text} className="w-14 h-14 object-contain transform transition-all duration-300 group-hover:scale-110 opacity-80 group-hover:opacity-100" style={{
-                  filter: 'grayscale(20%) brightness(0.9) contrast(1.1)'
-                }} />
+                    {/* Enhanced gradient background */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${achievement.gradient} opacity-10 group-hover:opacity-20 rounded-2xl transition-all duration-300 group-hover:scale-110 blur-sm`}></div>
+                    
+                    {/* Icon container */}
+                    <div className={`relative w-16 h-16 bg-gradient-to-br ${achievement.gradient} rounded-2xl p-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg group-hover:shadow-xl`}>
+                      <achievement.Icon 
+                        className="w-full h-full text-white transition-all duration-300 group-hover:scale-110" 
+                        strokeWidth={2}
+                      />
+                    </div>
+                    
+                    {/* Glow effect */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${achievement.gradient} opacity-0 group-hover:opacity-30 rounded-2xl blur-xl transition-all duration-300 -z-10`}></div>
                   </div>
                   
                   <div className="flex-1">

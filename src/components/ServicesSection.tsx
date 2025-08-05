@@ -14,7 +14,7 @@ const ServicesSection = () => {
       Icon: Zap,
       title: "Paid Social Strategy",
       description: "Data-backed social media plans that maximize reach and conversions across all major platforms with creative A/B testing.",
-      pricing: "$2000/Month",
+      pricing: "$2,000/month",
       engagement: "Project-based or retainer",
       gradient: "from-yellow-500 to-orange-500"
     },

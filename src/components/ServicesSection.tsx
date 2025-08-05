@@ -1,9 +1,11 @@
 import { Rocket, Zap, TrendingUp, Palette, BarChart3, Brain } from 'lucide-react';
+import Icon3D from './Icon3D';
 
 const ServicesSection = () => {
   const services = [
     {
       Icon: Rocket,
+      iconName: "rocket",
       title: "Performance Media",
       description: "ROI-first campaigns on Instagram, Meta, Google, YouTube & TikTok with advanced audience targeting and conversion optimization.",
       pricing: "From $3,500/month",
@@ -12,6 +14,7 @@ const ServicesSection = () => {
     },
     {
       Icon: Zap,
+      iconName: "zap",
       title: "Paid Social Strategy",
       description: "Data-backed social media plans that maximize reach and conversions across all major platforms with creative A/B testing.",
       pricing: "$2000/Month",
@@ -20,6 +23,7 @@ const ServicesSection = () => {
     },
     {
       Icon: TrendingUp,
+      iconName: "trending",
       title: "Programmatic & Display",
       description: "Automated audience buying across top DSPs for scale and efficiency, leveraging real-time bidding and advanced targeting.",
       pricing: "From $4,500/month",
@@ -28,6 +32,7 @@ const ServicesSection = () => {
     },
     {
       Icon: Palette,
+      iconName: "palette",
       title: "Creative for Performance",
       description: "High-impact creative assets optimized for A/B testing, designed specifically for performance marketing campaigns.",
       pricing: "From $1,500/month",
@@ -36,6 +41,7 @@ const ServicesSection = () => {
     },
     {
       Icon: BarChart3,
+      iconName: "chart",
       title: "Data & Analytics Reporting",
       description: "Transparent dashboards with actionable insights, real-time performance tracking, and comprehensive ROI analysis.",
       pricing: "Included in packages",
@@ -44,6 +50,7 @@ const ServicesSection = () => {
     },
     {
       Icon: Brain,
+      iconName: "brain",
       title: "AI-driven Creative & Website Dev",
       description: "Smart assets and landing pages powered by AI, optimized for conversion and personalized user experiences.",
       pricing: "Custom packages",
@@ -77,22 +84,13 @@ const ServicesSection = () => {
             >
               <div className="mb-6">
                 <div className="relative mb-4 flex justify-center">
-                  <div className="relative">
-                    {/* Enhanced gradient background */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-15 blur-xl rounded-full scale-150 transition-all duration-500 group-hover:opacity-25 group-hover:scale-175`}></div>
-                    
-                    {/* Icon container with enhanced styling */}
-                    <div className={`relative w-20 h-20 bg-gradient-to-br ${service.gradient} rounded-3xl p-5 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 shadow-2xl group-hover:shadow-3xl`}>
-                      <service.Icon 
-                        className="w-full h-full text-white transition-all duration-500 group-hover:scale-110" 
-                        strokeWidth={2}
-                      />
-                    </div>
-                    
-                    {/* Multi-layer glow effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-40 rounded-3xl blur-2xl transition-all duration-500 -z-10 animate-pulse`}></div>
-                    <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-20 rounded-3xl blur-3xl transition-all duration-700 -z-20 scale-150`}></div>
-                  </div>
+                  <Icon3D 
+                    name={service.iconName}
+                    LucideIcon={service.Icon}
+                    size="lg"
+                    gradient={service.gradient}
+                    className="transition-all duration-500"
+                  />
                 </div>
                 
                 <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">

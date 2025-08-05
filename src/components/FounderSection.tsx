@@ -53,7 +53,7 @@ const FounderSection = () => {
           <div className="lg:col-span-1 text-center animate-scale-in">
             <div className="relative inline-block mb-6">
               <div className="w-48 h-48 mx-auto rounded-2xl overflow-hidden shadow-elegant ring-4 ring-primary/20">
-                <img src="/lovable-uploads/8c654703-febf-406f-8268-943a86db488b.png" alt="Pankaj Tiwaskar" className="w-full h-full object-cover" />
+                <img src="/lovable-uploads/3e64bb48-1f02-4a36-b59a-8669fcd6b71c.png" alt="Pankaj Tiwaskar" className="w-full h-full object-cover" />
               </div>
               
             </div>

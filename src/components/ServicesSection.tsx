@@ -22,7 +22,7 @@ const ServicesSection = () => {
       Icon: TrendingUp,
       title: "Programmatic & Display",
       description: "Automated audience buying across top DSPs for scale and efficiency, leveraging real-time bidding and advanced targeting.",
-      pricing: "From $4,500/month",
+      pricing: "$200/month",
       engagement: "Enterprise partnerships",
       gradient: "from-green-500 to-emerald-500"
     },

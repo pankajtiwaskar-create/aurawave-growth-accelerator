@@ -4,6 +4,8 @@ import AboutAuraWaveSection from '@/components/AboutAuraWaveSection';
 import AboutSection from '@/components/AboutSection';
 import FounderSection from '@/components/FounderSection';
 import ServicesSection from '@/components/ServicesSection';
+import HowWeWorkSection from '@/components/HowWeWorkSection';
+import PricingSection from '@/components/PricingSection';
 import CTASection from '@/components/CTASection';
 import NewsSection from '@/components/NewsSection';
 import ContactSection from '@/components/ContactSection';
@@ -20,6 +22,8 @@ const Index = () => {
         <AboutSection />
         <FounderSection />
         <ServicesSection />
+        <HowWeWorkSection />
+        <PricingSection />
         <CTASection />
         <ContactSection />
         <NewsSection />

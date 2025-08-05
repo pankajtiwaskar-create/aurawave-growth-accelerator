@@ -23,6 +23,31 @@ const AboutAuraWaveSection = () => {
             <p>
               We don't believe in one-size-fits-all. Every campaign is crafted with performance in mind—whether it's bold brand storytelling or razor-sharp targeting. We use data, design, and innovation to build smarter media strategies and scalable results.
             </p>
+
+            <div className="bg-card border rounded-lg p-6 my-8">
+              <h3 className="text-xl font-semibold text-foreground mb-4">Our Business Philosophy</h3>
+              <p className="text-muted-foreground mb-4">
+                Unlike traditional agencies that charge hefty retainers regardless of results, we believe in <strong className="text-foreground">performance-driven partnerships</strong>. Our success is directly tied to your growth.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>Transparent pricing with no hidden fees</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>Performance bonuses aligned with your KPIs</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>30-day rolling contracts, no lock-ins</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>Full access to campaign data & insights</span>
+                </div>
+              </div>
+            </div>
             
             <p className="font-medium text-foreground text-xl">
               When you partner with AuraWave Digital, you're not outsourcing a service — you're gaining a team that thinks like an owner, acts like an extension of your brand, and is invested in your growth.

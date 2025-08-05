@@ -30,10 +30,13 @@ const CTASection = () => {
               Ready to Scale Your Brand in{' '}
               <span className="text-glow">Southeast Asia?</span>
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-4">
               Get a custom growth plan tailored to your business goals. 
               Join 50+ brands that have achieved exceptional ROI with our 
               data-driven paid media strategies.
+            </p>
+            <p className="text-sm text-muted-foreground max-w-lg mx-auto">
+              Start with a free marketing audit and strategy session. No obligation, just actionable insights for your business.
             </p>
           </div>
 
@@ -56,13 +59,23 @@ const CTASection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" onClick={() => scrollToSection('contact')} className="btn-hero text-lg px-8 py-4 group">
-              Schedule Strategy Call
+              Get Free Marketing Audit
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
             <Button variant="outline" size="lg" onClick={() => window.open('https://wa.me/919923765568', '_blank')} className="btn-ghost text-lg px-8 py-4">
               Chat on WhatsApp
             </Button>
+          </div>
+
+          <div className="mt-8">
+            <p className="text-sm text-muted-foreground mb-4">Our proven onboarding process:</p>
+            <div className="flex flex-wrap justify-center gap-4 text-xs">
+              <span className="bg-card border rounded-full px-3 py-1">1. Free Audit Call</span>
+              <span className="bg-card border rounded-full px-3 py-1">2. Custom Strategy</span>
+              <span className="bg-card border rounded-full px-3 py-1">3. Implementation</span>
+              <span className="bg-card border rounded-full px-3 py-1">4. Optimize & Scale</span>
+            </div>
           </div>
 
           {/* Trust Indicators */}

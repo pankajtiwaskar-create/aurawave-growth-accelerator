@@ -11,32 +11,44 @@ const ServicesSection = () => {
     {
       icon: rocketIcon,
       title: "Performance Media",
-      description: "ROI-first campaigns on Instagram, Meta, Google, YouTube & TikTok with advanced audience targeting and conversion optimization."
+      description: "ROI-first campaigns on Instagram, Meta, Google, YouTube & TikTok with advanced audience targeting and conversion optimization.",
+      pricing: "From $3,500/month",
+      engagement: "Monthly retainer + ad spend"
     },
     {
       icon: zapIcon,
       title: "Paid Social Strategy",
-      description: "Data-backed social media plans that maximize reach and conversions across all major platforms with creative A/B testing."
+      description: "Data-backed social media plans that maximize reach and conversions across all major platforms with creative A/B testing.",
+      pricing: "Starting $2,500",
+      engagement: "Project-based or retainer"
     },
     {
       icon: trendingIcon,
       title: "Programmatic & Display",
-      description: "Automated audience buying across top DSPs for scale and efficiency, leveraging real-time bidding and advanced targeting."
+      description: "Automated audience buying across top DSPs for scale and efficiency, leveraging real-time bidding and advanced targeting.",
+      pricing: "From $4,500/month",
+      engagement: "Enterprise partnerships"
     },
     {
       icon: paletteIcon,
       title: "Creative for Performance",
-      description: "High-impact creative assets optimized for A/B testing, designed specifically for performance marketing campaigns."
+      description: "High-impact creative assets optimized for A/B testing, designed specifically for performance marketing campaigns.",
+      pricing: "From $1,500/month",
+      engagement: "Ongoing creative packages"
     },
     {
       icon: chartIcon,
       title: "Data & Analytics Reporting",
-      description: "Transparent dashboards with actionable insights, real-time performance tracking, and comprehensive ROI analysis."
+      description: "Transparent dashboards with actionable insights, real-time performance tracking, and comprehensive ROI analysis.",
+      pricing: "Included in packages",
+      engagement: "Performance-based bonuses"
     },
     {
       icon: brainIcon,
       title: "AI-driven Creative & Website Dev",
-      description: "Smart assets and landing pages powered by AI, optimized for conversion and personalized user experiences."
+      description: "Smart assets and landing pages powered by AI, optimized for conversion and personalized user experiences.",
+      pricing: "Custom packages",
+      engagement: "Project or equity-based"
     }
   ];
 
@@ -82,9 +94,16 @@ const ServicesSection = () => {
                   {service.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   {service.description}
                 </p>
+
+                <div className="pt-4 border-t border-border/50">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="font-medium text-primary">{service.pricing}</span>
+                    <span className="text-muted-foreground text-xs">{service.engagement}</span>
+                  </div>
+                </div>
               </div>
 
               <div className="mt-auto">

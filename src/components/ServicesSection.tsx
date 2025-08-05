@@ -6,7 +6,7 @@ const ServicesSection = () => {
       Icon: Rocket,
       title: "Performance Media",
       description: "ROI-first campaigns on Instagram, Meta, Google, YouTube & TikTok with advanced audience targeting and conversion optimization.",
-      pricing: "From $3,500/month",
+      pricing: "$2000/month",
       engagement: "Monthly retainer + ad spend",
       gradient: "from-orange-500 to-red-500"
     },

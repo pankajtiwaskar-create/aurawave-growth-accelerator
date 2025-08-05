@@ -80,8 +80,9 @@ const HeroSection = () => {
         
         
         {/* Main heading */}
-        <h1 className="hero-text-light text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{
-        animationDelay: '0.1s'
+        <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 animate-fade-in-up text-gray-100" style={{
+        animationDelay: '0.1s',
+        textShadow: '0 0 20px rgba(147, 51, 234, 0.3), 0 0 40px rgba(147, 51, 234, 0.1)'
       }}>
           Scale Your Business with AI-Powered
           <br />

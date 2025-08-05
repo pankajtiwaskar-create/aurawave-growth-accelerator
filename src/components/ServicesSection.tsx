@@ -53,7 +53,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="section-padding bg-slate-100/80">
+    <section id="services" className="section-padding bg-slate-100/80 dark:bg-zinc-950/50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h3 className="text-sm font-semibold text-primary mb-2 tracking-wider uppercase">

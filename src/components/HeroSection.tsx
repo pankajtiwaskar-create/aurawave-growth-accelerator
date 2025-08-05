@@ -83,15 +83,9 @@ const HeroSection = () => {
         <h1 className="hero-text-light text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{
         animationDelay: '0.1s'
       }}>
-          Scale Your Business with{' '}
-          <span className="bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent">
-            AI-Powered
-          </span>
+          Scale Your Business with AI-Powered
           <br />
-          Media Campaigns That{' '}
-          <span className="bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent">
-            Actually Convert
-          </span>
+          Media Campaigns That Actually Convert
         </h1>
         
         {/* Subheading */}

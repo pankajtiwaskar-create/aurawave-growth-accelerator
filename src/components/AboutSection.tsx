@@ -54,7 +54,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-muted/30">
+    <section id="about" className="section-padding bg-slate-50/80">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">

@@ -71,7 +71,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors duration-300 group">
                 <MapPin className="w-4 h-4 transition-transform duration-300 group-hover:scale-110 flex-shrink-0" />
-                <span className="text-sm">Southeast Asia (Remote)</span>
+                
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors duration-300 group">
                 <Mail className="w-4 h-4 transition-transform duration-300 group-hover:scale-110 flex-shrink-0" />

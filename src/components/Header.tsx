@@ -54,10 +54,6 @@ const Header = () => {
             <img 
               src={auraWaveLogo} 
               alt="Aurawave Digital" 
-              width={40}
-              height={40}
-              decoding="async"
-              fetchPriority="high"
               className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
             />
             <span className="text-h3 font-bold text-glow transition-all duration-300 group-hover:scale-105">
@@ -145,8 +141,8 @@ const Header = () => {
                 </Link>
                 <Button
                   size="sm"
-                  variant="default"
                   onClick={() => scrollToSection('contact')}
+                  className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/25"
                 >
                   Get Started
                 </Button>
@@ -196,9 +192,8 @@ const Header = () => {
                 </Link>
                 <Button
                   size="sm"
-                  variant="default"
                   onClick={() => scrollToSection('contact')}
-                  className="w-full"
+                  className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/25"
                 >
                   Get Started
                 </Button>

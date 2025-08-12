@@ -140,9 +140,9 @@ const Header = () => {
                   </Button>
                 </Link>
                 <Button
-                  size="primary"
+                  size="sm"
                   onClick={() => scrollToSection('contact')}
-                  className="btn-primary"
+                  className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/25"
                 >
                   Get Started
                 </Button>
@@ -191,9 +191,9 @@ const Header = () => {
                   </Button>
                 </Link>
                 <Button
-                  size="primary"
+                  size="sm"
                   onClick={() => scrollToSection('contact')}
-                  className="w-full btn-primary"
+                  className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/25"
                 >
                   Get Started
                 </Button>

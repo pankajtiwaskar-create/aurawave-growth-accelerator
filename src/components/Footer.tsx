@@ -1,24 +1,9 @@
-import { useState } from 'react';
-import { Linkedin, Instagram, Twitter, Mail, Phone, MapPin, Send, ArrowRight } from 'lucide-react';
+import { Phone, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import auraWaveLogo from '/lovable-uploads/10a26a67-60d6-4878-acab-46f09790c371.png';
 const Footer = () => {
-  const [email, setEmail] = useState('');
   const currentYear = new Date().getFullYear();
-  const socialLinks = [{
-    icon: Linkedin,
-    href: 'https://linkedin.com/company/aurawave-digital',
-    label: 'LinkedIn'
-  }, {
-    icon: Instagram,
-    href: 'https://instagram.com/aurawavedigital',
-    label: 'Instagram'
-  }, {
-    icon: Twitter,
-    href: 'https://twitter.com/aurawavedigital',
-    label: 'Twitter'
-  }];
   const quickLinks = [{
     label: 'Home',
     href: 'hero'
@@ -42,12 +27,6 @@ const Footer = () => {
         behavior: 'smooth'
       });
     }
-  };
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Newsletter signup logic would go here
-    console.log('Newsletter signup:', email);
-    setEmail('');
   };
   return <footer className="relative bg-gradient-to-br from-background via-background to-primary/5 dark:from-slate-900 dark:via-slate-900 dark:to-primary/10 border-t border-primary/20 dark:border-primary/30 transition-colors duration-500 overflow-hidden">
       {/* Background Pattern */}
@@ -75,32 +54,6 @@ const Footer = () => {
               data-driven paid media campaigns and AI-powered optimization.
             </p>
 
-            <div className="space-y-5">
-              <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors duration-300 group p-3 rounded-xl hover:bg-primary/5 dark:hover:bg-primary/10">
-                <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
-                  <Mail className="w-4 h-4 transition-transform duration-300 group-hover:scale-110 flex-shrink-0 text-primary" />
-                </div>
-                <a href="mailto:hello@aurawavedigital.com" className="text-sm hover:text-primary transition-colors duration-300 font-medium">
-                  hello@aurawavedigital.com
-                </a>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-4 pt-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-primary/10 hover:bg-primary/20 text-primary hover:text-primary-foreground hover:bg-primary transition-all duration-300 group"
-                  style={{ animationDelay: `${0.3 + index * 0.1}s` }}
-                >
-                  <social.icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links - Enhanced Design */}

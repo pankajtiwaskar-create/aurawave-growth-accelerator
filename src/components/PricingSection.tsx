@@ -100,7 +100,7 @@ const PricingSection = () => {
           {pricingTiers.map((tier, index) => (
             <Card 
               key={index} 
-              className={`relative overflow-hidden transition-all duration-300 hover:shadow-xl ${
+              className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-glow ${
                 tier.highlighted ? 'ring-2 ring-primary scale-105' : ''
               }`}
             >

@@ -8,11 +8,11 @@
 @layer base {
   :root {
     /* Typography Scale */
-    --font-h1: 3rem; /* 48px */
-    --font-h2: 2.25rem; /* 36px */
-    --font-h3: 1.5rem; /* 24px */
+    --font-h1: 2.75rem; /* 44px */
+    --font-h2: 2rem; /* 32px */
+    --font-h3: 1.375rem; /* 22px */
     --font-body: 1rem; /* 16px */
-    --line-height-body: 1.6;
+    --line-height-body: 1.55;
     --color-text-primary: 213 27% 20%; /* #333 equivalent in HSL */
     --color-text-secondary: 210 8% 40%; /* #666 equivalent in HSL */
 
@@ -187,9 +187,9 @@
   /* Responsive Typography */
   @media (max-width: 768px) {
     :root {
-      --font-h1: 2rem; /* 32px on mobile */
-      --font-h2: 1.75rem; /* 28px on mobile */
-      --font-h3: 1.25rem; /* 20px on mobile */
+      --font-h1: 1.875rem; /* 30px on mobile */
+      --font-h2: 1.5rem; /* 24px on mobile */
+      --font-h3: 1.125rem; /* 18px on mobile */
       --spacing-2xl: 2.5rem; /* 40px on mobile */
     }
   }

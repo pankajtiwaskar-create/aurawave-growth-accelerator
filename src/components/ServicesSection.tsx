@@ -1,38 +1,38 @@
-import { Target, Users, Globe, Briefcase, BarChart3, Settings } from 'lucide-react';
+import { Rocket, Zap, TrendingUp, Palette, BarChart3, Brain } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
     {
-      Icon: Target,
+      Icon: Rocket,
       title: "Performance Media",
       description: "ROI-first campaigns on Instagram, Meta, Google, YouTube & TikTok with advanced audience targeting and conversion optimization.",
       pricing: "$2000/month",
       engagement: "Monthly retainer + ad spend",
-      gradient: "from-slate-600 to-slate-700"
+      gradient: "from-orange-500 to-red-500"
     },
     {
-      Icon: Users,
+      Icon: Zap,
       title: "Paid Social Strategy",
       description: "Data-backed social media plans that maximize reach and conversions across all major platforms with creative A/B testing.",
       pricing: "$2,000/month",
       engagement: "Project-based or retainer",
-      gradient: "from-gray-600 to-gray-700"
+      gradient: "from-yellow-500 to-orange-500"
     },
     {
-      Icon: Globe,
+      Icon: TrendingUp,
       title: "Programmatic & Display",
       description: "Automated audience buying across top DSPs for scale and efficiency, leveraging real-time bidding and advanced targeting.",
       pricing: "$2000/month",
       engagement: "Enterprise partnerships",
-      gradient: "from-zinc-600 to-zinc-700"
+      gradient: "from-green-500 to-emerald-500"
     },
     {
-      Icon: Briefcase,
+      Icon: Palette,
       title: "Creative for Performance",
       description: "High-impact creative assets optimized for A/B testing, designed specifically for performance marketing campaigns.",
       pricing: "From $1,500/month",
       engagement: "Ongoing creative packages",
-      gradient: "from-stone-600 to-stone-700"
+      gradient: "from-purple-500 to-pink-500"
     },
     {
       Icon: BarChart3,
@@ -40,15 +40,15 @@ const ServicesSection = () => {
       description: "Transparent dashboards with actionable insights, real-time performance tracking, and comprehensive ROI analysis.",
       pricing: "Included in packages",
       engagement: "Performance-based bonuses",
-      gradient: "from-neutral-600 to-neutral-700"
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
-      Icon: Settings,
+      Icon: Brain,
       title: "AI-driven Creative & Website Dev",
       description: "Smart assets and landing pages powered by AI, optimized for conversion and personalized user experiences.",
       pricing: "Custom packages",
       engagement: "Project or equity-based",
-      gradient: "from-slate-700 to-slate-800"
+      gradient: "from-indigo-500 to-purple-500"
     }
   ];
 
@@ -78,19 +78,20 @@ const ServicesSection = () => {
               <div className="mb-6">
                 <div className="relative mb-4 flex justify-center">
                   <div className="relative">
-                    {/* Subtle background */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-10 blur-lg rounded-full scale-125 transition-all duration-500 group-hover:opacity-15 group-hover:scale-140`}></div>
+                    {/* Enhanced gradient background */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-15 blur-xl rounded-full scale-150 transition-all duration-500 group-hover:opacity-25 group-hover:scale-175`}></div>
                     
-                    {/* Icon container with muted styling */}
-                    <div className={`relative w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl p-4 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl`}>
+                    {/* Icon container with enhanced styling */}
+                    <div className={`relative w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-3xl p-4 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 shadow-2xl group-hover:shadow-3xl`}>
                       <service.Icon 
-                        className="w-full h-full text-white transition-all duration-300" 
-                        strokeWidth={1.5}
+                        className="w-full h-full text-white transition-all duration-500 group-hover:scale-110" 
+                        strokeWidth={2}
                       />
                     </div>
                     
-                    {/* Subtle glow effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-20 rounded-2xl blur-xl transition-all duration-300 -z-10`}></div>
+                    {/* Multi-layer glow effect */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-40 rounded-3xl blur-2xl transition-all duration-500 -z-10 animate-pulse`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-20 rounded-3xl blur-3xl transition-all duration-700 -z-20 scale-150`}></div>
                   </div>
                 </div>
                 

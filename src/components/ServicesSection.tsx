@@ -95,11 +95,11 @@ const ServicesSection = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors text-center">
                   {service.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-4 text-center">
                   {service.description}
                 </p>
 

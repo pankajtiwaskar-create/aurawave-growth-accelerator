@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* AuraWave Digital Design System */
+/* Aurawave Digital Design System */
 @layer base {
   :root {
     /* Typography Scale */
@@ -45,7 +45,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: var(--color-text-primary);
 
-    /* AuraWave Brand Colors - More Sophisticated */
+    /* Aurawave Brand Colors - More Sophisticated */
     --primary: 225 63% 25%; /* Deep Navy Blue #1E293B */
     --primary-foreground: 0 0% 98%;
     --primary-glow: 225 83% 35%; /* Brighter Navy */

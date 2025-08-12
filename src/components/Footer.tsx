@@ -57,9 +57,9 @@ const Footer = () => {
           {/* Company Info - 40% width */}
           <div className="md:col-span-1 lg:pr-8 animate-fade-in-up space-y-6">
             <div className="flex items-center space-x-3 group cursor-pointer">
-              <img src={auraWaveLogo} alt="AuraWave Digital" className="w-8 h-8 transition-transform duration-300 group-hover:scale-110" />
+              <img src={auraWaveLogo} alt="Aurawave Digital" className="w-8 h-8 transition-transform duration-300 group-hover:scale-110" />
               <span className="text-h3 font-bold text-glow transition-all duration-300 group-hover:scale-105">
-                AuraWave Digital
+                Aurawave Digital
               </span>
             </div>
             

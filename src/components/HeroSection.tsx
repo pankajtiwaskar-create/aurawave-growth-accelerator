@@ -93,7 +93,7 @@ const HeroSection = () => {
         <p className="hero-text-light text-xl mb-md max-w-3xl mx-auto animate-fade-in-up" style={{
         animationDelay: '0.2s'
       }}>
-          AuraWave is the retainer-based media agency that combines cutting-edge AI technology with proven marketing strategies to deliver consistent, measurable growth for your business—month after month.
+          Aurawave is the retainer-based media agency that combines cutting-edge AI technology with proven marketing strategies to deliver consistent, measurable growth for your business—month after month.
         </p>
 
         {/* Supporting Copy */}

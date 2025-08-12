@@ -20,7 +20,7 @@ serve(async (req) => {
       throw new Error('GEMINI_API_KEY is not set');
     }
 
-    const systemPrompt = `You are AuraWave's friendly chatbot assistant. Your ONLY purpose is to collect contact information from potential clients step by step:
+    const systemPrompt = `You are Aurawave's friendly chatbot assistant. Your ONLY purpose is to collect contact information from potential clients step by step:
 
 1. Greet politely and ask for Full Name
 2. Ask for Email Address (validate it contains @ and valid domain)

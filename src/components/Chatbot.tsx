@@ -104,7 +104,7 @@ const Chatbot = () => {
 
       switch (currentStep) {
         case 'greeting':
-          botResponse = "Hello! I'm here to help you get in touch with AuraWave. Let's start by getting your full name.";
+          botResponse = "Hello! I'm here to help you get in touch with Aurawave. Let's start by getting your full name.";
           setCurrentStep('name');
           isValid = true;
           break;
@@ -195,7 +195,7 @@ const Chatbot = () => {
   const openChat = () => {
     setIsOpen(true);
     if (messages.length === 0) {
-      addMessage("Hello! I'm AuraWave's assistant. I'm here to help you get in touch with our team. What's your full name?", 'bot');
+      addMessage("Hello! I'm Aurawave's assistant. I'm here to help you get in touch with our team. What's your full name?", 'bot');
       setCurrentStep('name');
     }
   };
@@ -208,7 +208,7 @@ const Chatbot = () => {
     setMessages([]);
     setFormData({ name: '', email: '', phone: '', message: '' });
     setCurrentStep('greeting');
-    addMessage("Hello! I'm AuraWave's assistant. I'm here to help you get in touch with our team. What's your full name?", 'bot');
+    addMessage("Hello! I'm Aurawave's assistant. I'm here to help you get in touch with our team. What's your full name?", 'bot');
     setCurrentStep('name');
   };
 
@@ -240,7 +240,7 @@ const Chatbot = () => {
           
           {/* Floating Label */}
           <div className="absolute bottom-full right-0 mb-2 bg-card border border-border rounded-lg px-3 py-2 shadow-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-            <p className="text-sm font-medium text-foreground">Chat with AuraWave</p>
+            <p className="text-sm font-medium text-foreground">Chat with Aurawave</p>
           </div>
         </div>
       )}
@@ -256,7 +256,7 @@ const Chatbot = () => {
                   {getStepIcon()}
                 </div>
                 <div>
-                  <h3 className="font-semibold">AuraWave Assistant</h3>
+                  <h3 className="font-semibold">Aurawave Assistant</h3>
                   <p className="text-sm opacity-90">Let's get your info</p>
                 </div>
               </div>

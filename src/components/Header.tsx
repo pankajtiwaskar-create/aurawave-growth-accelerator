@@ -53,11 +53,11 @@ const Header = () => {
           <div className="flex items-center space-x-3 group cursor-pointer">
             <img 
               src={auraWaveLogo} 
-              alt="AuraWave Digital" 
+              alt="Aurawave Digital" 
               className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
             />
             <span className="text-h3 font-bold text-glow transition-all duration-300 group-hover:scale-105">
-              AuraWave Digital
+              Aurawave Digital
             </span>
           </div>
 

@@ -81,11 +81,11 @@ const Auth = () => {
           <div className="flex items-center justify-center space-x-3 mb-4">
             <img 
               src={auraWaveLogo} 
-              alt="AuraWave Digital" 
+              alt="Aurawave Digital" 
               className="w-12 h-12"
             />
             <span className="text-2xl font-bold text-glow">
-              AuraWave Digital
+              Aurawave Digital
             </span>
           </div>
           <p className="text-muted-foreground">

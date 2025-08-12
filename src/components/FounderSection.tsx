@@ -53,13 +53,13 @@ const FounderSection = () => {
           <div className="lg:col-span-1 text-center animate-scale-in">
             <div className="relative inline-block mb-6">
               <div className="w-48 h-48 mx-auto rounded-2xl overflow-hidden shadow-elegant ring-4 ring-primary/20">
-                <img src="/lovable-uploads/cfb4c06c-7423-43d4-a9c6-aeedea0d21f3.png" alt="AuraWave founder portrait" className="w-full h-full object-cover" loading="lazy" />
+                <img src="/lovable-uploads/cfb4c06c-7423-43d4-a9c6-aeedea0d21f3.png" alt="Aurawave founder portrait" className="w-full h-full object-cover" loading="lazy" />
               </div>
               
             </div>
             
             <h3 className="text-2xl font-bold mb-2">Pankaj Tiwaskar</h3>
-            <p className="text-muted-foreground text-lg mb-4">Founder & CEO, AuraWave Digital</p>
+            <p className="text-muted-foreground text-lg mb-4">Founder & CEO, Aurawave Digital</p>
             <p className="text-muted-foreground leading-relaxed">
               Performance marketing strategist with 12+ years of experience scaling brands 
               across Southeast Asia markets through data-driven paid media campaigns.

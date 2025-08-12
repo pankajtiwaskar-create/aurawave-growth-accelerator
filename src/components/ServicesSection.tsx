@@ -82,7 +82,7 @@ const ServicesSection = () => {
                     <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-15 blur-xl rounded-full scale-150 transition-all duration-500 group-hover:opacity-25 group-hover:scale-175`}></div>
                     
                     {/* Icon container with enhanced styling */}
-                    <div className={`relative w-20 h-20 bg-gradient-to-br ${service.gradient} rounded-3xl p-5 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 shadow-2xl group-hover:shadow-3xl`}>
+                    <div className={`relative w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-3xl p-4 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 shadow-2xl group-hover:shadow-3xl`}>
                       <service.Icon 
                         className="w-full h-full text-white transition-all duration-500 group-hover:scale-110" 
                         strokeWidth={2}

@@ -79,7 +79,7 @@ const FounderSection = () => {
                     <div className={`absolute inset-0 bg-gradient-to-br ${achievement.gradient} opacity-10 group-hover:opacity-20 rounded-2xl transition-all duration-300 group-hover:scale-110 blur-sm`}></div>
                     
                     {/* Icon container */}
-                    <div className={`relative w-16 h-16 bg-gradient-to-br ${achievement.gradient} rounded-2xl p-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg group-hover:shadow-xl`}>
+                    <div className={`relative w-12 h-12 bg-gradient-to-br ${achievement.gradient} rounded-2xl p-3 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg group-hover:shadow-xl`}>
                       <achievement.Icon 
                         className="w-full h-full text-white transition-all duration-300 group-hover:scale-110" 
                         strokeWidth={2}

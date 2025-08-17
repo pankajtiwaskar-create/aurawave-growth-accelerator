@@ -96,12 +96,6 @@ const HeroSection = () => {
           Aurawave is the retainer-based media agency that combines cutting-edge AI technology with proven marketing strategies to deliver consistent, measurable growth for your business—month after month.
         </p>
 
-        {/* Supporting Copy */}
-        <p className="hero-text-light opacity-90 mb-lg max-w-4xl mx-auto animate-fade-in-up" style={{
-        animationDelay: '0.25s'
-      }}>
-          Our AI-driven approach analyzes your market, optimizes your messaging, and scales your success across all channels. With transparent reporting and dedicated account management, you'll know exactly how your investment drives real business results.
-        </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-md justify-center mb-2xl animate-fade-in-up" style={{

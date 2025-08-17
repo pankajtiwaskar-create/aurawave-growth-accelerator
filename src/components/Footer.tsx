@@ -87,7 +87,7 @@ const Footer = () => {
               <div className="p-4 rounded-xl bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/20 group hover:border-primary/30 transition-colors duration-300">
                 <h4 className="font-semibold mb-3 text-foreground flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary"></div>
-                  <span>India Office</span>
+                  <span>Contact</span>
                 </h4>
                 <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors duration-300">
                   <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">

@@ -20,7 +20,7 @@ export default {
 		extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        zasfrina: ['Dancing Script', 'cursive'],
+        outfit: ['Outfit', 'sans-serif'],
       },
 			fontSize: {
 				'h1': 'var(--font-h1)',

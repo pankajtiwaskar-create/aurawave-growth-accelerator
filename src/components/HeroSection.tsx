@@ -80,7 +80,7 @@ const HeroSection = () => {
         
         
         {/* Main heading */}
-        <h1 className="animate-fade-in-up text-gray-100" style={{
+        <h1 className="animate-fade-in-up text-gray-100 font-zasfrina mb-2xl" style={{
         animationDelay: '0.1s',
         textShadow: '0 0 20px rgba(147, 51, 234, 0.3), 0 0 40px rgba(147, 51, 234, 0.1)'
       }}>

@@ -18,9 +18,10 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-			},
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        zasfrina: ['Dancing Script', 'cursive'],
+      },
 			fontSize: {
 				'h1': 'var(--font-h1)',
 				'h2': 'var(--font-h2)',

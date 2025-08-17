@@ -75,12 +75,12 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
 
       {/* Main Content */}
-      <div className="content-container relative z-10 text-center mt-auto mb-lg -mt-4">
+      <div className="content-container relative z-10 text-center mt-auto mb-lg">
         {/* Small header badge */}
         
         
         {/* Main heading */}
-        <h1 className="animate-fade-in-up text-gray-100 text-3xl md:text-4xl" style={{
+        <h1 className="animate-fade-in-up text-gray-100" style={{
         animationDelay: '0.1s',
         textShadow: '0 0 20px rgba(147, 51, 234, 0.3), 0 0 40px rgba(147, 51, 234, 0.1)'
       }}>

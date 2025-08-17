@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutAurawaveSection from '@/components/AboutAurawaveSection';
-import AboutSection from '@/components/AboutSection';
+
 import FounderSection from '@/components/FounderSection';
 import ServicesSection from '@/components/ServicesSection';
 import HowWeWorkSection from '@/components/HowWeWorkSection';
@@ -19,7 +19,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutAurawaveSection />
-        <AboutSection />
+        
         <FounderSection />
         <ServicesSection />
         <HowWeWorkSection />

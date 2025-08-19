@@ -1,7 +1,7 @@
 import { Phone, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import auraWaveLogo from '/lovable-uploads/9601150c-d1c7-4a96-86a7-7edafc256340.png';
+import auraWaveLogo from '/lovable-uploads/10a26a67-60d6-4878-acab-46f09790c371.png';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const quickLinks = [{

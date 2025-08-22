@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X, User, LogOut } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Moon, Sun, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useAuth } from '@/hooks/useAuth';
 import auraWaveLogo from '/lovable-uploads/10a26a67-60d6-4878-acab-46f09790c371.png';
 
 const Header = () => {
   const [isDark, setIsDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { user, signOut } = useAuth();
 
   useEffect(() => {
     const theme = localStorage.getItem('theme');
@@ -110,43 +107,13 @@ const Header = () => {
               )}
             </Button>
 
-            {/* Auth Buttons */}
-            {user ? (
-              <div className="hidden lg:flex items-center space-x-3">
-                <span className="text-sm text-muted-foreground">
-                  {user.email}
-                </span>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={signOut}
-                  className="hover:bg-destructive hover:text-destructive-foreground"
-                >
-                  <LogOut className="w-4 h-4 mr-2" />
-                  Sign Out
-                </Button>
-              </div>
-            ) : (
-              <div className="hidden lg:flex items-center space-x-3">
-                <Link to="/auth">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="hover:bg-primary hover:text-primary-foreground"
-                  >
-                    <User className="w-4 h-4 mr-2" />
-                    Sign In
-                  </Button>
-                </Link>
-                <Button
-                  size="sm"
-                  onClick={() => scrollToSection('contact')}
-                  className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/25"
-                >
-                  Get Started
-                </Button>
-              </div>
-            )}
+            <Button
+              size="sm"
+              onClick={() => scrollToSection('contact')}
+              className="hidden lg:block bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/25"
+            >
+              Get Started
+            </Button>
           </div>
         </div>
       </div>
@@ -164,40 +131,15 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
-            {user ? (
-              <div className="mt-6 space-y-3">
-                <p className="text-sm text-muted-foreground text-center">
-                  Signed in as {user.email}
-                </p>
-                <Button
-                  onClick={signOut}
-                  variant="outline"
-                  className="w-full hover:bg-destructive hover:text-destructive-foreground"
-                >
-                  <LogOut className="w-4 h-4 mr-2" />
-                  Sign Out
-                </Button>
-              </div>
-            ) : (
-              <div className="mt-6 space-y-3">
-                <Link to="/auth" className="block">
-                  <Button
-                    variant="outline"
-                    className="w-full hover:bg-primary hover:text-primary-foreground"
-                  >
-                    <User className="w-4 h-4 mr-2" />
-                    Sign In
-                  </Button>
-                </Link>
-                <Button
-                  size="sm"
-                  onClick={() => scrollToSection('contact')}
-                  className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/25"
-                >
-                  Get Started
-                </Button>
-              </div>
-            )}
+            <div className="mt-6">
+              <Button
+                size="sm"
+                onClick={() => scrollToSection('contact')}
+                className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/25"
+              >
+                Get Started
+              </Button>
+            </div>
           </nav>
         </div>
       )}

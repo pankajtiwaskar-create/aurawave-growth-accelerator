@@ -109,7 +109,7 @@ const FounderSection = () => {
       }}>
           <h3 className="text-center text-lg font-semibold mb-2 text-muted-foreground">Founder's Experience</h3>
           <p className="text-center text-sm text-muted-foreground/80 mb-8">
-            Excelled in leading multinational corporations across diverse markets including Singapore, Japan, and Australia
+            Excelled in leading multinational corporations across diverse markets including Singapore, Japan, and India with expertise in APAC markets
           </p>
           
           <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">

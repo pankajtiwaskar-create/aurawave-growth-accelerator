@@ -1,25 +1,20 @@
 import { Award, Globe, Briefcase, DollarSign } from 'lucide-react';
-import ibmLogo from '../assets/logos/ibm-logo.png';
-import threeMLogo from '../assets/logos/3m-logo.png';
-import publicisLogo from '../assets/logos/publicis-logo.png';
-import wppLogo from '../assets/logos/wpp-logo.png';
-import omnicomLogo from '../assets/logos/omnicom-logo.png';
 const FounderSection = () => {
   const clientLogos = [{
     name: 'IBM',
-    logo: ibmLogo
+    color: 'text-blue-600'
   }, {
     name: '3M',
-    logo: threeMLogo
+    color: 'text-red-600'
   }, {
     name: 'Publicis',
-    logo: publicisLogo
+    color: 'text-purple-600'
   }, {
     name: 'WPP',
-    logo: wppLogo
+    color: 'text-orange-600'
   }, {
     name: 'Omnicom',
-    logo: omnicomLogo
+    color: 'text-green-600'
   }];
   const achievements = [{
     Icon: Award,
@@ -39,7 +34,7 @@ const FounderSection = () => {
   }, {
     Icon: Globe,
     text: "Experience in 5+ Asia Markets",
-    description: "India, Japan, Singapore, Vietnam, Indonesia",
+    description: "India, Japan, Singapore, Vietnam, Australia",
     gradient: "from-purple-500 to-pink-500"
   }];
   return <section id="founder" className="section-padding">
@@ -119,13 +114,8 @@ const FounderSection = () => {
           
           <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
             {clientLogos.map((logo, index) => <div key={index} className="group cursor-pointer transition-all duration-300 hover:scale-110">
-                <div className="h-12 w-24 flex items-center justify-center">
-                  <img 
-                    src={logo.logo} 
-                    alt={`${logo.name} company logo`}
-                    className="h-full w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
-                    loading="lazy"
-                  />
+                <div className={`text-3xl font-bold ${logo.color} group-hover:text-primary transition-colors`}>
+                  {logo.name}
                 </div>
               </div>)}
           </div>

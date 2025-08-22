@@ -1,5 +1,5 @@
 const AboutAurawaveSection = () => {
-  return <section className="section-padding bg-slate-100/80 dark:bg-zinc-950/50">
+  return <section id="about" className="section-padding bg-slate-100/80 dark:bg-zinc-950/50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">

@@ -107,7 +107,10 @@ const FounderSection = () => {
         <div className="mt-20 animate-fade-in-up" style={{
         animationDelay: '0.6s'
       }}>
-          <h3 className="text-center text-lg font-semibold mb-8 text-muted-foreground">Work Experience</h3>
+          <h3 className="text-center text-lg font-semibold mb-2 text-muted-foreground">Founder's Experience</h3>
+          <p className="text-center text-sm text-muted-foreground/80 mb-8">
+            Excelled in leading multinational corporations across diverse markets including Singapore, Japan, and Australia
+          </p>
           
           <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
             {clientLogos.map((logo, index) => <div key={index} className="group cursor-pointer transition-all duration-300 hover:scale-110">

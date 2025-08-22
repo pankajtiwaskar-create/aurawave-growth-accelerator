@@ -14,9 +14,6 @@ const Footer = () => {
     label: 'Services',
     href: 'services'
   }, {
-    label: 'News',
-    href: 'news'
-  }, {
     label: 'Contact',
     href: 'contact'
   }];
@@ -35,10 +32,10 @@ const Footer = () => {
       
       <div className="content-container relative z-10">
         {/* Main Footer Content */}
-        <div className="section-padding grid grid-cols-1 md:grid-cols-3 gap-lg lg:gap-2xl">
+        <div className="section-padding grid grid-cols-1 md:grid-cols-2 gap-lg lg:gap-2xl">
           
           {/* Company Info - Enhanced Design */}
-          <div className="md:col-span-1 lg:pr-8 animate-fade-in-up space-y-8">
+          <div className="animate-fade-in-up space-y-8">
             <div className="flex items-center space-x-3 group cursor-pointer">
               <div className="relative">
                 <img src={auraWaveLogo} alt="Aurawave Digital" className="w-10 h-10 transition-transform duration-300 group-hover:scale-110 drop-shadow-lg" />
@@ -56,30 +53,8 @@ const Footer = () => {
 
           </div>
 
-          {/* Quick Links - Enhanced Design */}
-          <div className="animate-fade-in-up space-y-6" style={{ animationDelay: '0.1s' }}>
-            <h3 className="text-lg font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Quick Links</h3>
-            <nav className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <button 
-                  key={link.label} 
-                  onClick={() => scrollToSection(link.href)} 
-                  className="block w-full text-left p-3 rounded-xl text-muted-foreground hover:text-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-sm font-medium group"
-                  style={{ animationDelay: `${0.2 + index * 0.05}s` }}
-                >
-                  <span className="flex items-center space-x-2">
-                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-primary" />
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">
-                      {link.label}
-                    </span>
-                  </span>
-                </button>
-              ))}
-            </nav>
-          </div>
-
           {/* Contact - Enhanced Design */}
-          <div className="animate-fade-in-up space-y-6" style={{ animationDelay: '0.2s' }}>
+          <div className="animate-fade-in-up space-y-6" style={{ animationDelay: '0.1s' }}>
             <h3 className="text-lg font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Connect With Us</h3>
             
             {/* Contact Numbers */}
@@ -99,6 +74,27 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Quick Links - Horizontal Layout */}
+        <div className="py-8 border-t border-primary/10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="text-center space-y-4">
+            <h3 className="text-lg font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Quick Links</h3>
+            <nav className="flex justify-center items-center flex-wrap gap-6">
+              {quickLinks.map((link, index) => (
+                <button 
+                  key={link.label} 
+                  onClick={() => scrollToSection(link.href)} 
+                  className="px-4 py-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-sm font-medium group"
+                  style={{ animationDelay: `${0.3 + index * 0.05}s` }}
+                >
+                  <span className="transition-transform duration-300 group-hover:scale-105">
+                    {link.label}
+                  </span>
+                </button>
+              ))}
+            </nav>
           </div>
         </div>
 
